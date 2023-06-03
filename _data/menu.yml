@@ -1,25 +1,25 @@
 # For documentation on this file, see:
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
-entries:
-  - title: info
-    entries:
-      - title: "a blabla bla html"
-      - title: github repo
-        url: https://github.com/riggraz/no-style-please
 
-  - title: all posts
+entries:
+  - title: Hi, I'm Léo
+    entries:
+      - title: Mathematician by training, Machine Learning for a living.
+      - title: Not active on socials but you can check my resume <a href="https://www.linkedin.com/in/leodreyfusschmidt/">here</a>.
+
+  - title: All posts
     post_list:
       limit: 3
-      show_more: true
-      show_more_text: See archive...
-      show_more_url: archive.html
+      #show_more: true
+      #show_more_text: See archive...
+      #show_more_url: archive.html
 
-  - title: posts by "some category"
-    post_list:
-      category: example2
-      limit: 1
-      show_more: true
-      show_more_text: See more posts...
-      show_more_url: example2-archive.html
+#  - title: posts by "some category"
+#    post_list:
+#      category: example2
+#      limit: 1
+#      show_more: true
+#      show_more_text: See more posts...
+#      show_more_url: example2-archive.html
   
