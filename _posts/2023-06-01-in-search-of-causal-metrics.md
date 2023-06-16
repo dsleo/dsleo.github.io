@@ -6,7 +6,7 @@ category: causal
 usemathjax: true
 ---
 
-This post is the first in of a serie that chronicles my journey into Causal Machine Learning.
+This post is the first in a serie that chronicles my journey into Causal Machine Learning.
 
 When leaving the realm of traditional Machine Mearning to join the shore of Causal Inference, it’s not the fancy deep learning algorithms that we ultimately miss the most, it’s the metrics. Without metrics, without statistical learning theory, no performance guarantee.  
   
