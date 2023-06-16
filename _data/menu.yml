@@ -11,9 +11,9 @@ entries:
   - title: All posts
     post_list:
       limit: 3
-      #show_more: true
-      #show_more_text: See archive...
-      #show_more_url: archive.html
+      show_more: true
+      show_more_text: See more...
+      show_more_url: archive.html
 
 #  - title: posts by "some category"
 #    post_list:
