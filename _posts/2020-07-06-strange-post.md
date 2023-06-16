@@ -7,4 +7,3 @@ usemathjax: true
 <p>Author: {{ site.author }}</p>
 <p>Email: {{ site.email }}</p>
 <p>Twitter: <a href="https://twitter.com/{{ site.twitter_username }}">{{ site.twitter_username }}</a></p>
-This post is strange. It also has some custom js. $$E=mc^2$$
