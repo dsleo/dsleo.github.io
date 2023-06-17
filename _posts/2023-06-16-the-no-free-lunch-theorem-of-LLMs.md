@@ -48,7 +48,7 @@ This assumes the existence of an initial dataset large enough for the model to b
 ---
 ### Any Human Left Standing ?
 
-Because we should never blindly trust any model, LLM or not, specially for validation task, it’s a good idea to make the above strategies human-in-the-loop. That’s why solutions like [scale.ai](http://scale.ai) or [snorkel.ai](https://snorkel.ai) should naturally reap the benefits of this new paradigm. You let do LLM as much heavy lifting as possible but keep it on leash with some monitoring.
+Because we should never blindly trust any model, LLM or not, specially for validation task, it’s a good idea to make the above strategies human-in-the-loop. That’s why solutions like [scale.ai](http://scale.ai) or [snorkel.ai](https://snorkel.ai) should naturally reap the benefits of this new paradigm. You let do LLM as much heavy lifting as possible but keep it on leash with some monitoring. Ultimately you still have to pay the price for validation but you get a massive discount with LLMs !
 
 ---
 {: data-content="footnotes"}
