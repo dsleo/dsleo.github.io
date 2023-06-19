@@ -18,6 +18,7 @@ Quick side story, a few years ago, we spent probably as much time training uplif
 
 Way before the rise of Data Science and to answer this marketing need, [Victor Lo](https://scholar.google.com/citations?user=WNH2c1oAAAAJ&hl=en) wrote a comprehensive serie of papers on uplift analytics[^3]. Very pragmatic in scope, they cover real-life requirements such as the need for metrics or how to make uplift policies under constraints.
 
+---
 ## Classic Uplift Metrics
 
 **Settings**. Let's start by consider the case of binary treatment \\(T\\). We try to estimate the cumulative gain of treatment if we were to follow a given policy, possibly trained on historical data.  
@@ -40,6 +41,7 @@ In [Learning to Rank For Uplift Modeling](https://arxiv.org/pdf/2002.05897.pdf),
 
 We will now discuss three specific points with those metrics: the extension from binary to multi-treatment, the perfect uplift curve and a robust extension to uplift curve.
 
+---
 ## Extension to Multi-treatment
 
 We now move to multiple treatments settings with still a control. We can extend the previous metric naturally by replacing the left term \\(D_i^{Treated}\\) with \\(D_i^{T=\mu(X)}\\), the subpopulation of units that received the treatment that the policy \\(\mu\\) would have proposed.
@@ -63,6 +65,7 @@ We cannot normalise by the policy's predicted ATE (the curve's last point) anymo
 
 **Note.** After writing this, I came across [mr_uplift](https://github.com/Ibotta/mr_uplift) which is a library dedicated to multi-treatment uplift that offer similar metrics.
 
+---
 ## What’s *the* perfect uplift curve?
 
 Let’s go back to binary treatment. One of the benefits of uplift curves is that you can define a theoretical perfect policy on the historical data. Of course, this is only a restrospective and not a prescriptive policy but it’s always interesting to have upper bound.
@@ -75,6 +78,7 @@ This is under the implicit hypothesis that there are as many treated as control.
 
 ![Beautiful Screenshot](/assets/images/perfect-uplift.jpeg)
 
+---
 ## Robust Uplift (Iso-predicted uplift)
 
 In (again) the very nice [About Evaluation Metrics for Contextual Uplift modeling](https://arxiv.org/pdf/2107.00537.pdf), the authors discusses how to deal with segments of the population with same predicted uplift.
