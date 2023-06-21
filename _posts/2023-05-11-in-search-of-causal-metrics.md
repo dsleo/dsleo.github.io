@@ -6,17 +6,45 @@ category: causal
 usemathjax: true
 ---
 
-This post is the first in a serie that chronicles my journey into Causal Machine Learning.
+\[This post is the first in a serie that chronicles my journey into Causal Machine Learning. This post assumes basic familiarity with the fundamentals of the domain.\]
 
 When leaving the realm of traditional Machine Mearning to join the shore of Causal Inference, it’s not the fancy deep learning algorithms that we ultimately miss the most, it’s the metrics. Without metrics, without statistical learning theory, no performance guarantee.  
   
-As a direct consequence of [the fundamental problem of causal inference](https://en.wikipedia.org/wiki/Rubin_causal_model#The_fundamental_problem_of_causal_inference), it is hard to evaluate what we partially observe. The very notion of ground truth disappears. If a policy suggests a treatment different than the one a unit actually received, how can we tell which treatment allocation is the best one?  
+As a direct consequence of [the fundamental problem of causal inference](https://en.wikipedia.org/wiki/Rubin_causal_model#The_fundamental_problem_of_causal_inference), it is impossible to evaluate what we partially observe. The very notion of ground truth disappears. If a policy suggests a treatment different than the one a unit actually received, how can we tell which treatment allocation is the best one?  
 
-Taking a ML practitioner perpspetive, the absence of a dedicated model validation section in [econML](https://github.com/py-why/EconML), a major open source framework for causal ML practitioner really is a mystery. Fortunately, [causalML](https://github.com/uber/causalml) another major open source library offers standard uplift metrics (such as Qini and uplift) and isn't the only one[^1]. This is probably due to marketing being the original domain of application of uplift modelling and one of the use case at Uber. 
+---
+## Causal Metrics, really?
 
-Quick side story, a few years ago, we spent probably as much time training uplift models than convincing the head of marketing of a major makeup company to do random action allocation for the next round of model training[^2]. If you want to see any change in a marketing strategy, you better have very sound and convincing numbers to show for in order to extend marketing campaigns.
+From a ML practitioner perspective, the absence of a dedicated model validation section in [econML](https://github.com/py-why/EconML), a major open source framework for causal ML practitioner really is a mystery. Fortunately, [causalML](https://github.com/uber/causalml) another major open source library offers standard uplift metrics (that we'll introduce shortly) and isn't the only one[^1]. This is probably due to marketing being the original domain of application of uplift modelling and one of the use case at Uber. 
 
-Way before the rise of Data Science and to answer this marketing need, [Victor Lo](https://scholar.google.com/citations?user=WNH2c1oAAAAJ&hl=en) wrote a comprehensive serie of papers on uplift analytics[^3]. Very pragmatic in scope, they cover real-life requirements such as the need for metrics or how to make uplift policies under constraints.
+Quick side story, a few years ago, we spent probably as much time training uplift models than convincing the head of marketing of a major retail company to do random action allocation for the next round of model training. If you want to see any change in a marketing strategy, you better have very sound and convincing numbers to show for in order to extend marketing campaigns.
+
+Way before the rise of Data Science and to answer this marketing need, [Victor Lo](https://scholar.google.com/citations?user=WNH2c1oAAAAJ&hl=en) wrote a comprehensive serie of papers on uplift analytics[^2]. Very pragmatic in scope, they cover real-life requirements such as the need for metrics or how to make uplift policies under constraints.
+
+---
+## The State of Causal Model Selection
+
+The first academic solution is to resort to synthetic settings where treatment allocation and counterfactuals are fully controled. Model performance can then be measured as in standard Machine Learning with the PEHE (Precision Estimation of Heterogeneous Effects) metric. If this is a good sanity check when designing models, this doesn't help with causal model selection in real-life settings.  
+
+Several recent studies have delved into this research avenue. Many risks or evaluation metrics has been proposed in the literature, which often are the very objective of a learner, such as the R-score which is the R-learner objective.  
+
+In particular, three bodies of work shared the same goal and very similar settings, although with slightly different conclusions. They set up benchmarking over a collection of learners, semi-synthetic datasets and scores. They then measure how well those scores correlate with the oracle metric.  
+
+1. The first study, [Empirical Analysis of Model Selection for Heterogeneous Causal Effect Estimation](https://arxiv.org/pdf/2211.01939.pdf), by Syrgkanis (from [econML](https://www.microsoft.com/en-us/research/project/econml/) team) states that "no metric significantly dominates the rest". It has the most extensive set up both in terms of models and scores.  
+
+2. Sharing similar conclusion is van der Schaar's ICML 2023 paper [Towards Demystification of the Model Selection Dilemma in Heterogeneous Treatment Effect Estimation](https://arxiv.org/pdf/2302.02923.pdf). They also show, quite unsurprisingly, evidence of a *congeniality bias*: 
+> Selection criteria relying on plug-in estimates of treatment effects are likely 
+> to favor estimators that resemble their plug-in.  
+
+3. However, Varoquaux's [How to select predictive models for causal inference?](https://arxiv.org/pdf/2302.00370.pdf) reaches a different conclusion. They measure Kendall tau \\(\kappa\\) between the ideal oracle ranking and the causal metrics under evaluation.
+> A good causal model-selection procedure: using the so-called R-risk; using flexible estimators to compute the nuisance models on the train set; and splitting out 10% of the data to compute risks. 
+
+Note however that they restrict the class of meta-learners (no R-learner for instance) as they claim they compare causal metrics and not optimal learners...  
+
+Here is a very nice summary of the estimation procedure:
+![Causal Model Selection](/assets/images/causal_model_selection.jpg)
+
+What can we do from here? Well if there isn't a clear winner, we might as well look as the most interpretable and actionable metrics, and this is where uplift metrics come into play.
 
 ---
 ## Classic Uplift Metrics
@@ -36,6 +64,7 @@ For a complete and rigorous presentation of those metrics and all their variants
 
 ![Qini and Uplift Curves Definition](/assets/images/qini-uplift-def.png)
 
+SAY BRADY PAPER added Qini scores !!
 
 In [Learning to Rank For Uplift Modeling](https://arxiv.org/pdf/2002.05897.pdf), the discrepancies in the literature around Qini/uplift curves is also nicely presented.
 
@@ -57,7 +86,7 @@ In this Uber's paper [Uplift Modeling for Multiple Treatments with Cost Optimiza
 What's going on ? In binary settings, all uplift metrics end at the global ATE on the validation data, which is not the case for multi-treatment. 
 This means that we need to be very careful in how normalization is done in order to do model selection.
 
-We cannot normalise by the policy's predicted ATE (the curve's last point) anymore as this depends on the population policy, which is the control group together with \\(D^{T=\mu(X)}\\). This normalization makes model comparison impossible[^4] and we need to control for the total population policy size.
+We cannot normalise by the policy's predicted ATE (the curve's last point) anymore as this depends on the population policy, which is the control group together with \\(D^{T=\mu(X)}\\). This normalization makes model comparison impossible[^3] and we need to control for the total population policy size.
 
 **Extensions.** 
 1. When doing cross-validation, a better strategy is to do that normalization over each fold and average the folds by the global fold ATE.    
@@ -79,13 +108,14 @@ This is under the implicit hypothesis that there are as many treated as control.
 ![Beautiful Screenshot](/assets/images/perfect-uplift.jpeg)
 
 ---
-## Robust Uplift (Iso-predicted uplift)
+## Robust Uplift
 
-In (again) the very nice [About Evaluation Metrics for Contextual Uplift modeling](https://arxiv.org/pdf/2107.00537.pdf), the authors discusses how to deal with segments of the population with same predicted uplift.
+In (again) the very nice [About Evaluation Metrics for Contextual Uplift modeling](https://arxiv.org/pdf/2107.00537.pdf), the authors discusses how to deal with segments of the population with same predicted (iso-predicted) uplift.
 
 ![Iso-uplift](/assets/images/iso-uplift.png)
 
-As suggested we can do linear interpolation for such segments (see python code below). This is a sort of average optimum. Another way to proceed is to consider the minimum and maxium uplift curve segment which convey the natural uncertainty of those segments.
+As suggested we can do linear interpolation for such segments (see python code below) which is a sort of average optimum. Similarly, we could consider the minimum and maxium uplift curve segment which convey a natural uncertainty over those segments.  
+Another natural extension is to have a looser definition of iso-predicted, and define either a tolerance parameter or a binning.
 
 ```python
 def constant_segments(x):
@@ -135,7 +165,6 @@ Last but not least, note that the issues discussed here with metrics for uplift 
 {: data-content="footnotes"}
 
 [^1]: There are others like [scikit-uplift](https://github.com/maks-sh/scikit-uplift), [causallift](https://github.com/Minyus/causallift), the now-archived Wayfair library[pylift](https://github.com/wayfair/pylift), or the highly scalable Booking [UpliftML](https://github.com/bookingcom/upliftml).
-[^2]: During my tenure at [Dataiku](http://dataiku.com).
-[^3]: Papers like [Mining for the truly responsive customers and prospects using true-lift modeling: Comparison of new and existing methods](https://link.springer.com/article/10.1057/jma.2014.18) or [From predictive uplift modeling to prescriptive uplift analytics: A practical approach to treatment optimization while accounting for estimation risk](https://link.springer.com/article/10.1057/jma.2015.5)... that can be easily found on sci-hub thankfully.
-[^4]: Unfortunately this is how normalization is done in causalML [at this point](https://github.com/uber/causalml/blob/master/causalml/metrics/visualize.py#L178).
-[^5]: Also presented in the [Criteo paper](https://arxiv.org/pdf/2107.00537.pdf).
+[^2]: Papers like [Mining for the truly responsive customers and prospects using true-lift modeling: Comparison of new and existing methods](https://link.springer.com/article/10.1057/jma.2014.18) or [From predictive uplift modeling to prescriptive uplift analytics: A practical approach to treatment optimization while accounting for estimation risk](https://link.springer.com/article/10.1057/jma.2015.5)... that can be easily found on sci-hub thankfully.
+[^3]: Unfortunately this is how normalization is done in causalML [at this point](https://github.com/uber/causalml/blob/master/causalml/metrics/visualize.py#L178).
+[^4]: Also presented in the [Criteo paper](https://arxiv.org/pdf/2107.00537.pdf).
