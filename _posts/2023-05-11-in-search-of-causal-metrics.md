@@ -6,8 +6,6 @@ category: causal
 usemathjax: true
 ---
 
-\[This post is the first in a serie that chronicles my journey into Causal Machine Learning. This post assumes basic familiarity with the fundamentals of the domain.\]
-
 When leaving the realm of traditional Machine Mearning to join the shore of Causal Inference, it’s not the fancy deep learning algorithms that we ultimately miss the most, it’s the metrics. Without metrics, without statistical learning theory, no performance guarantee.  
   
 As a direct consequence of [the fundamental problem of causal inference](https://en.wikipedia.org/wiki/Rubin_causal_model#The_fundamental_problem_of_causal_inference), it is impossible to evaluate what we partially observe. The very notion of ground truth disappears. If a policy suggests a treatment different than the one a unit actually received, how can we tell which treatment allocation is the best one?  
