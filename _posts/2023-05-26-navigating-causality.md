@@ -6,12 +6,12 @@ category: causal
 usemathjax: true
 ---
 
-In the [previous post](http://dsleo.github.io/causal/2023/06/01/causal-metrics.html), we discussed the influence of marketing optimization to the field of causal inference. It’s actually part of a much larger phenomenon that makes causal inference unique, as the intersection of various scientific domains. Whether marketing or epistemology, clinical trials, socio-economics and econometrics or the modern data-driven tech fields, they all care for cause identification or effect estimation. A good example of making explicit such mappings can be found in [Causal Inference and Uplift Modeling](https://proceedings.mlr.press/v67/gutierrez17a/gutierrez17a.pdf). 
+In the [previous post](http://dsleo.github.io/causal/2023/06/01/causal-metrics.html), we discussed the influence of marketing optimization to the field of causal inference. It’s actually part of a much larger phenomenon that makes causal inference unique, as the intersection of various scientific domains. Whether marketing or epistemology, clinical trials, socio-economics and econometrics or the modern data-driven tech fields, they all care for cause identification or effect estimation. A good example of making explicit such mappings can be found in the 2016 paper [Causal Inference and Uplift Modeling](https://proceedings.mlr.press/v67/gutierrez17a/gutierrez17a.pdf). 
 
 
 For instance whether the ultimate goal is to build prescriptive policy (what treatment should we give in the future, either globally or locally to a group or even an individual) or make retrospective estimation (what was the impact of a given event that isn’t necessarily controlled). Another crucial distinction is the relationship with experiments, sometimes they are not possible at all (for ethical reasons as in clinical trials) and sometimes treatment allocation can be fully controlled (marketing campaign for e-commerces). 
 
-This makes for a very diverse literature with different motivations, settings and objectives or even notations. Thankfully, [Brady Neal](https://www.bradyneal.com)put it nicely in this flowchart
+This makes for a very diverse literature with different motivations, settings and objectives or even notations. Thankfully, [Brady Neal](https://www.bradyneal.com) put it nicely in this flowchart
 
 ![Flowchart](/assets/images/flowchart_causal_book.png)
 
