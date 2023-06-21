@@ -30,7 +30,7 @@ Several recent studies have delved into this research avenue. Many risks or eval
 
 In particular, three bodies of work shared the same goal and very similar settings, although with slightly different conclusions. They set up benchmarking over a collection of learners, semi-synthetic datasets and scores. They then measure how well those scores correlate with the oracle metric.  
 
-1. The first study, [Empirical Analysis of Model Selection for Heterogeneous Causal Effect Estimation](https://arxiv.org/pdf/2211.01939.pdf), by Syrgkanis (from [econML](https://www.microsoft.com/en-us/research/project/econml/) team) states that "no metric significantly dominates the rest". It has the most extensive set up both in terms of models and scores.  
+1. The first study, [Empirical Analysis of Model Selection for Heterogeneous Causal Effect Estimation](https://arxiv.org/pdf/2211.01939.pdf), by Syrgkanis (from [econML](https://www.microsoft.com/en-us/research/project/econml/) team) states that "no metric significantly dominates the rest". It has the most extensive set up both in terms of models and scores[^3].  
 
 2. Sharing similar conclusion is van der Schaar's ICML 2023 paper [Towards Demystification of the Model Selection Dilemma in Heterogeneous Treatment Effect Estimation](https://arxiv.org/pdf/2302.02923.pdf). They also show, quite unsurprisingly, evidence of a *congeniality bias*: 
 > Selection criteria relying on plug-in estimates of treatment effects are likely 
@@ -64,8 +64,6 @@ For a complete and rigorous presentation of those metrics and all their variants
 
 ![Qini and Uplift Curves Definition](/assets/images/qini-uplift-def.png)
 
-SAY BRADY PAPER added Qini scores !!
-
 In [Learning to Rank For Uplift Modeling](https://arxiv.org/pdf/2002.05897.pdf), the discrepancies in the literature around Qini/uplift curves is also nicely presented.
 
 We will now discuss three specific points with those metrics: the extension from binary to multi-treatment, the perfect uplift curve and a robust extension to uplift curve.
@@ -86,7 +84,7 @@ In this Uber's paper [Uplift Modeling for Multiple Treatments with Cost Optimiza
 What's going on ? In binary settings, all uplift metrics end at the global ATE on the validation data, which is not the case for multi-treatment. 
 This means that we need to be very careful in how normalization is done in order to do model selection.
 
-We cannot normalise by the policy's predicted ATE (the curve's last point) anymore as this depends on the population policy, which is the control group together with \\(D^{T=\mu(X)}\\). This normalization makes model comparison impossible[^3] and we need to control for the total population policy size.
+We cannot normalise by the policy's predicted ATE (the curve's last point) anymore as this depends on the population policy, which is the control group together with \\(D^{T=\mu(X)}\\). This normalization makes model comparison impossible[^4] and we need to control for the total population policy size.
 
 **Extensions.** 
 1. When doing cross-validation, a better strategy is to do that normalization over each fold and average the folds by the global fold ATE.    
@@ -166,5 +164,6 @@ Last but not least, note that the issues discussed here with metrics for uplift 
 
 [^1]: There are others like [scikit-uplift](https://github.com/maks-sh/scikit-uplift), [causallift](https://github.com/Minyus/causallift), the now-archived Wayfair library[pylift](https://github.com/wayfair/pylift), or the highly scalable Booking [UpliftML](https://github.com/bookingcom/upliftml).
 [^2]: Papers like [Mining for the truly responsive customers and prospects using true-lift modeling: Comparison of new and existing methods](https://link.springer.com/article/10.1057/jma.2014.18) or [From predictive uplift modeling to prescriptive uplift analytics: A practical approach to treatment optimization while accounting for estimation risk](https://link.springer.com/article/10.1057/jma.2015.5)... that can be easily found on sci-hub thankfully.
-[^3]: Unfortunately this is how normalization is done in causalML [at this point](https://github.com/uber/causalml/blob/master/causalml/metrics/visualize.py#L178).
-[^4]: Also presented in the [Criteo paper](https://arxiv.org/pdf/2107.00537.pdf).
+[^3]: We introduced one of the author of the paper (Brady Neal) to Qini scores which was added to a second version of the paper :). 
+[^4]: Unfortunately this is how normalization is done in causalML [at this point](https://github.com/uber/causalml/blob/master/causalml/metrics/visualize.py#L178).
+[^5]: Also presented in the [Criteo paper](https://arxiv.org/pdf/2107.00537.pdf).
