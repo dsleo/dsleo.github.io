@@ -41,7 +41,7 @@ This is probably more than enough for most of the tasks but with the newly found
 
 However this is only exploiting our original data and doesn’t provide exploration nor diversity. And once again, you can use LLM for that in a meta-learning fashion by describing the targeted task and directly asking for diverse samples representative of the task, similarly to what Self-Instruct does.
 
-A starter prompt to iterate on could look like:
+A starter ChatGPT prompt to iterate on could look like:
 
 ![ChatGPT Prompt](/assets/images/prompt_example.png)
 
