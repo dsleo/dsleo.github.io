@@ -22,7 +22,7 @@ The (almost) meta spin here is that you can use LLM to synthetically generate or
 
 Starting from our original pair of `(query, code)`, you can generate a set of multiple `{(query_1, code), (query_2, code), … }` by asking for semantic reformulation of the query. You can also guide the reformulation to account for some implicit factors, such as tone or level of expertise. Things like “Reformulate the original query as if you were {a 60 years old novice/an expert/ drunk}”. This naturally adds diversity to the input feature space.  
 
-As very often in a constant evolving field, I later discovered that generating task instructions together with input-output pairs is the basis of the instruction tuning proceduring presented in [Self-Instruct: Aligning Language Models with Self-Generated Instructions](https://arxiv.org/abs/2212.10560). 
+As very often in a constant evolving field, I later discovered that generating task instructions together with input-output pairs is the basis of the instruction tuning proceduring presented in [Self-Instruct: Aligning Language Models with Self-Generated Instructions](https://arxiv.org/abs/2212.10560) ([github](https://github.com/yizhongw/self-instruct)). 
 
 ![Self-Instruct](/assets/images/self-instruct.png) 
   
