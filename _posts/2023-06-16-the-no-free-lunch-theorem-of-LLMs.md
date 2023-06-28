@@ -22,24 +22,16 @@ The (almost) meta spin here is that you can use LLM to synthetically generate or
 
 Starting from our original pair of `(query, code)`, you can generate a set of multiple `{(query_1, code), (query_2, code), … }` by asking for semantic reformulation of the query. You can also guide the reformulation to account for some implicit factors, such as tone or level of expertise. Things like “Reformulate the original query as if you were {a 60 years old novice/an expert/ drunk}”. This naturally adds diversity to the input feature space.  
 
-As very often in a constant evolving field, I later discovered that generating task instructions together with input-output pairs is the basis of the instruction tuning proceduring presented in [Self-Instruct: Aligning Language Models with Self-Generated Instructions](https://arxiv.org/abs/2212.10560) ([github](https://github.com/yizhongw/self-instruct)). 
+As very often in a constant evolving field, I later discovered that generating task instructions together with input-output pairs is the basis of the instruction tuning procedure presented in [Self-Instruct: Aligning Language Models with Self-Generated Instructions](https://arxiv.org/abs/2212.10560) ([github](https://github.com/yizhongw/self-instruct)). 
 
 ![Self-Instruct](/assets/images/self-instruct.png) 
   
-  
-<br/><br/>
-Of course, there are already augmentation NLP techniques[^1] which are not relying on LLMs, such as the ones presented in [Beyond Accuracy: Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~marcotcr/acl20_checklist.pdf) which proposed three types of templated tests of perturbations with expected effects on the model predictions. For instance the transformation describe above falls under their Invariance test.
-
-![Checklist](/assets/images/checklist.png)
-
-If those templates can be manually filled, the authors also suggest using masked language models to fill-in the masked elements that a user would then validate. For instance “Write MASK code to sort a list” could yield things like (Python, Go, SAS, C,…)".
-
-This is probably more than enough for most of the tasks but with the newly found power of LLMs, we can directly prompt the model with our task instructions.
+If Self-Instruct aims at improving the performance of instruction-tuning LLMs, we can simply use it to bootstrap our validation dataset.
 
 ---
 ## LLM-based Synthetic Data Generation
 
-However this is only exploiting our original data and doesn’t provide exploration nor diversity. And once again, you can use LLM for that in a meta-learning fashion by describing the targeted task and directly asking for diverse samples representative of the task, similarly to what Self-Instruct does.
+Indeed, we can prompt LLM, in a meta-learning fashion, to provide diverse samples representative of our task of interest.
 
 A starter ChatGPT prompt to iterate on could look like:
 
@@ -53,6 +45,18 @@ Specific to tabular data, [LLM are realistic tabular generation](https://arxiv.o
 This assumes the existence of an initial dataset large enough for the model to be fine-tuned but we could imagine a similar few-shot learning strategy with very limited number of examples.  
 
 Perhaps one last thing that could be interesting to explore is to leverage our favorite LLM to do adversarial augmentation.
+
+---
+### No LLM? No problem
+
+Of course, there are already augmentation NLP techniques[^1] which are not relying on LLMs, such as the ones presented in [Beyond Accuracy: Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~marcotcr/acl20_checklist.pdf) which proposed three types of templated tests of perturbations with expected effects on the model predictions. For instance the transformation describe above falls under their Invariance test.
+
+![Checklist](/assets/images/checklist.png)
+
+If those templates can be manually filled, the authors also suggest using masked language models to fill-in the masked elements that a user would then validate. For instance “Write MASK code to sort a list” could yield things like (Python, Go, SAS, C,…)".
+
+This is probably more than enough for most of the tasks but with the newly found power of LLMs, we can directly prompt the model with our task instructions.
+
 
 ---
 ### Any Human Left Standing ?
