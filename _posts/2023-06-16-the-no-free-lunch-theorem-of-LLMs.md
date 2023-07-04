@@ -7,13 +7,14 @@ slug: no free lunch for llm
 
 In the old world (of traditional ML), to train models, you first need to collect data, check its quality, and probably label it. All of those steps can be quite costly but you have to pay upfront to claim access to the realm of Machine Learning. Not only is labeled data necessary to train models, it is mandatory to get performance estimation.  
 
-Generalization bounds in [Statistical Learning theory](https://en.wikipedia.org/wiki/Statistical_learning_theory) provide us with guarantees on our models behaviour. Should the data conditions remain the same, metrics are telling us how well our models will *always* perform the same.
+Generalization bounds in [Statistical Learning theory](https://en.wikipedia.org/wiki/Statistical_learning_theory) provide us with guarantees on our models behaviour. Should the data conditions remain the same, metrics are telling us how well our models will *always* perform.  
 
-**Illustration**. Data then Model (pay upfront) vs Model then Data.
+**Illustration**. Data then Model (pay upfront) vs Model then Data.  
+  
 
-With LLM (or for that matter zero/few-shot learning), you have the wahoo demo effect of getting answers immediately. Lowering the entry barrier to AI means people with no training in data science or machine learning will ultimately feel into the [trough of disillusionment](https://www.gartner.com/en/chat/gartner-hype-cycle).  
+With LLM (or for that matter zero/few-shot learning), you have the wahoo demo effect of getting answers immediately. Not only we are biased by our imagination to provide test examples but to safely deply such system, we need guarantees on its external validity.  
 
-Not only we are biased by our imagination to provide test examples but to safely deply such system, we need guarantees on its external validity. And as in the old world to achieve validation, we need labeled data representative of our expected usage scenario.
+And as in the old world, to achieve validation, we need labeled data representative of our expected usage scenario. Lowering the entry barrier to AI means people with no training in data science or machine learning will ultimately fell into the [trough of disillusionment](https://www.gartner.com/en/chat/gartner-hype-cycle) if we don't tell them about the road that separates a flashy demo from a production-ready feature.  
 
 ---
 ## Bootstrapping Task Validation
@@ -55,7 +56,7 @@ Of course, there are already augmentation NLP techniques[^1] which are not relyi
 
 If those templates can be manually filled, the authors also suggest using masked language models to fill-in the masked elements that a user would then validate. For instance “Write MASK code to sort a list” could yield things like (Python, Go, SAS, C,…)".
 
-This is probably more than enough for most of the tasks but with the newly found power of LLMs, we can directly prompt the model with our task instructions.
+This is probably more than enough for most of the tasks but as we saw, with the newly found power of LLMs, we can directly prompt the model with our task instructions.
 
 
 ---
