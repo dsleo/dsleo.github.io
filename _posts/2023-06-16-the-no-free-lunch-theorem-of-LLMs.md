@@ -10,11 +10,18 @@ In the old world (of traditional ML), to train models, you first need to collect
 Generalization bounds in [Statistical Learning theory](https://en.wikipedia.org/wiki/Statistical_learning_theory) provide us with guarantees on our models behaviour. Should the data conditions remain the same, metrics are telling us how well our models will *always* perform.  
 
 **Illustration**. Data then Model (pay upfront) vs Model then Data.  
-  
 
 With LLM (or for that matter zero/few-shot learning), you have the wahoo demo effect of getting answers immediately. Not only we are biased by our imagination to provide test examples but to safely deply such system, we need guarantees on its external validity.  
 
 And as in the old world, to achieve validation, we need labeled data representative of our expected usage scenario. Lowering the entry barrier to AI means people with no training in data science or machine learning will ultimately fell into the [trough of disillusionment](https://www.gartner.com/en/chat/gartner-hype-cycle) if we don't tell them about the road that separates a flashy demo from a production-ready feature.  
+
+<figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+<video controls width="630" height="364">
+  <source src="/assets/videos/trap.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<figcaption style="margin-top: 10px; font-size: 14px;">When the LLM teaser doesn't give the full movie that easily</figcaption>
+</figure>
 
 ---
 ## Bootstrapping Task Validation
@@ -64,7 +71,7 @@ This is probably more than enough for most of the tasks but as we saw, with the 
 
 Because we should never blindly trust any model, LLM or not, specially for validation task, it’s a good idea to make the above strategies human-in-the-loop. That’s why enterprise solutions like [scale.ai](http://scale.ai) or [snorkel.ai](https://snorkel.ai) should naturally reap the benefits of this new paradigm. You let the LLMs do as much heavy lifting as possible but keep it on leash with some human monitoring.  
 
-As discussed, we always have to pay the price for validation but we get a massive discount with LLMs !
+As discussed, we always have to pay the price for validation but we get a massive discount with LLMs! 
 
 ---
 {: data-content="footnotes"}
