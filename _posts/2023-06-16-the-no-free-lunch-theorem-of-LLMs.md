@@ -7,7 +7,7 @@ slug: no free lunch for llm
 
 In the old world (of traditional ML), to train models, you first need to collect data, check its quality, and probably label it. All of those steps can be quite costly but you have to pay upfront to claim access to the realm of Machine Learning. Not only is labeled data necessary to train models, it is mandatory to get performance estimation.  
 
-Generalization bounds in [Statistical Learning theory](https://en.wikipedia.org/wiki/Statistical_learning_theory) provide us with guarantees on our models behaviour. Should the data conditions remain the same, metrics are telling us how well our models will *always* perform.  
+Generalization bounds in [Statistical Learning theory](https://en.wikipedia.org/wiki/Statistical_learning_theory) provide us with guarantees on our models behaviour. Should the data conditions remain the same, metrics are telling us how our models will *always* perform.  
 
 **Illustration**. Data then Model (pay upfront) vs Model then Data.  
 
