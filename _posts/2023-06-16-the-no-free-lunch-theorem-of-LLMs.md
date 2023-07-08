@@ -20,7 +20,7 @@ And as in the old world, to achieve validation, we need labeled data representat
   <source src="/assets/videos/trap.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-<figcaption style="margin-top: 10px; font-size: 14px;">When the LLM teaser doesn't give the full movie that easily</figcaption>
+<figcaption style="margin-top: 10px; font-size: 14px;">When the LLM teaser doesn't give the full ML movie that easily</figcaption>
 </figure>
 
 ---
