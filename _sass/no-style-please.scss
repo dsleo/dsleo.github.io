@@ -12,6 +12,10 @@
 
     &.ioda { filter: invert(0); }
   }
+
+  :not(iframe) {
+    filter: invert(1);
+  }
 }
 
 body[a="dark"] { @include dark-appearance; }
