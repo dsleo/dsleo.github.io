@@ -23,11 +23,12 @@ author: Léo Dreyfus-Schmidt
 email: your-email@example.com
 twitter_username: dsleo
 github_username:  dsleo
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: http://dsleo.github.io # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 description: >- # this means to ignore newlines until "baseurl:" 
  Documenting my learning.
 # description for head meta (Google search and feed.xml)
+goat_counter: dsleo
 
 favicon: "logo.png" # name+extension of favicon (which must be put on the root folder)
 # goat_counter: "yoursitename" # put your GoatCounter name if you want to use GoatCounter analytics
@@ -46,7 +47,7 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
