@@ -6,11 +6,11 @@ entries:
   - title: Hi, I'm Léo
     entries:
       - title: Mathematician by training, Machine Learning for a living.
-      - title: Not active on socials but you can check my resume <a href="https://www.linkedin.com/in/leodreyfusschmidt/">here</a>.
+      - title: I'm taking consulting ventures every so often. If you want to reach out, here's my <a href="https://www.linkedin.com/in/leodreyfusschmidt/">Linkedin</a>.
 
   - title: All posts
     post_list:
-      limit: 4
+      limit: 5
       show_more: true
       show_more_text: See more...
       show_more_url: archive.html
