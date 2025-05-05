@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Assistants of Abstraction: Proofs, Machines, and Structures"
+title: "Assistants of Abstraction: Proofs & Machines"
 slug: ai for mathematicians
 category: llm
 ---
