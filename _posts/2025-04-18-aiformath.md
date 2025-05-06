@@ -5,7 +5,7 @@ slug: ai for mathematicians
 category: llm
 ---
 
-This is an age-old tale of technology replacing human workers is playing out once again. Only this time, it’s on speakerphone, stuck on repeat and the technology is Artificial Intelligence.
+The age-old tale of technology replacing human workers is playing out once again. Only this time, it’s on speakerphone, stuck on repeat and the technology is Artificial Intelligence.
 First, we said it would alleviate us from boring, mundane, repetitive tasks like processing invoices in accounting, reviewing legal documents for keywords, or transcribing meeting notes in admin roles. Then Stable Diffusion came along, and suddenly AI started staking its claim on creativity [^1]. A few months later, ChatGPT was released.
 
 Then the unthinkable happened: Science itself was swept up in the AI revolution. In July 2024, DeepMind’s AlphaProof took home the silver medal at the International Mathematical Olympiad. By October, the Nobel Prize in Chemistry was awarded — not to a chemist, but to computer scientists at DeepMind, again. A creeping cynicism seems inevitable — because if even science can be automated, what remains sacred?
