@@ -104,17 +104,24 @@ Finally, the formalised version of an informal statement can have an impact on t
 </figure>
 
 There is two avenues to address this informal/formal discrepancy:
-- post-process valid formal proofs into more adequate natural proofs to make it more concise or readable. That's what work like [ImProver](https://arxiv.org/pdf/2410.04753) have started to explore for formal proofs. On top of which one could apply informalization, i.e. translating it into informal proof[^7].
+- post-process valid formal proofs into more adequate mathematician-like proofs to make it more concise or readable. That's what work like [ImProver](https://arxiv.org/pdf/2410.04753) have started to explore for formal proofs. On top of which one could apply informalization, i.e. translating it into informal proof[^7].
 - force the theorem provers model to generate natural proofs. This is what [Kimina-Prover](https://arxiv.org/pdf/2504.11354)[^8] set up to do by following the DeepSeek-R1 recipe of long chain-of-thoughts. Specifically, the model is trained to "think" (literally between <think> </think>tags) mixing informal reasoning and formal code snippet, before ultimately generating the full formalized Lean proof. This leverage the very strong capabalities of recent modern LLM for informal math reasoning with the logical guarantee of formal verification.
 
 <figure>
   <img src="/assets/images/kiminaprover.png" alt="Kimina-Prover" style="height: 500px; object-fit: contain;">
   <figcaption>
-      Kimina-Prover Informal/Formal Long Chain-of-Thoughts 
+      Kimina-Prover's Informal/Formal Long Chain-of-Thoughts 
   </figcaption>
 </figure>
 
 You can interact with Kimina-Prover and take it for a spin on your favorite IMO-level problem [here](https://demo.projectnumina.ai/).
+
+<figure>
+  <img src="/assets/images/kiminademo.png" alt="Kimina-Demo" style="height: 500px; object-fit: contain;">
+  <figcaption>
+      Kimina Interactive Proof Assistant 
+  </figcaption>
+</figure>
 
 ## We Want More Than Proof: Aligning AI with Human Mathematics
 
