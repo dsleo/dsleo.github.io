@@ -12,7 +12,7 @@ Then the unthinkable happened: Science itself was swept up in the AI revolution.
 
 ![AI death](/assets/images/ai_death.jpg)
 
-As a mathematician-turned-AI practitioner myself, I couldn't stay untouched by this whole movement. And yet, something felt off. While the impact on chemistry was undeniable, AI is still nowhere near earning a Fields Medal. Solving IMO problems might be impressive (and not just for AI), it remains largely symbolic. It’s a far cry from making a real impact on working mathematicians. This is a first sign of what the cultural divide between the AI and the mathematics community[^2].
+As a mathematician-turned-AI practitioner myself, I couldn't stay untouched by this whole movement. And yet, something felt off. While the impact on chemistry was undeniable, AI is still nowhere near earning a Fields Medal. Solving IMO problems might be impressive (and not just for AI), it remains largely symbolic. It’s a far cry from making a real impact on working mathematicians. This is a first sign of the cultural divide between the AI and the mathematics community[^2].
 
 For instance, the pride of AI scientists is to show "sota results"[^3] on any benchmark. What does it actually translate to, if anything? No one knows, no one cares.  What does it mean for a mathematician that the latest LLM can solve k out of n problems from a competition? Nothing. Most of the mathematician endeavour is not to prove a theorem, but to state it. And even when the question is already well-posed, it's quite far from competitive math problems.
 
