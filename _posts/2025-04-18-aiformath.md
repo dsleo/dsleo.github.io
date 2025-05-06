@@ -88,8 +88,7 @@ Even if AI models can prove complex results, they might not be aligned with  mat
 > We would like to see “prove this theorem, correctly, and explain what makes the proof work in a way which we humans understand”.  
 > With the language model approach I worry (a lot) about “correctly” and with the theorem prover approach I worry about “in a way which we humans understand”.
 
-Aligning informal and formal mathematics is harder than simply translating from one language to another sentence by sentence.
-(NOTE here is Kevin Buzzard again detailing his experience in formalizing an IMO problem https://xenaproject.wordpress.com/2019/08/01/imo-2019-q1/)
+Aligning informal and formal mathematics is harder than simply translating from one language to another sentence by sentence[^7].
 
 First, there is no clear relationship between the number of informal and formal logical steps . As we saw earlier, an elementary step in informal mathematics (e.g., 2+2=4) requires significantly more steps in Lean when done from first principles. On the other hand, just like any programming language, much of the heavy lifting of a mathematical proof can sometime be encapsulated in one tactic (like the [`ring`](https://leanprover-community.github.io/mathlib_docs/tactic/ring.html) or  [`simp`](https://leanprover-community.github.io/extras/simp.html) tactic). 
 
@@ -105,8 +104,8 @@ Finally, the formalised version of an informal statement can have an impact on t
 </figure>
 
 There is two avenues to address this informal/formal discrepancy:
-- post-process valid formal proofs into more adequate mathematician-like proofs to make it more concise or readable. That's what work like [ImProver](https://arxiv.org/pdf/2410.04753) have started to explore for formal proofs. On top of which one could apply informalization, i.e. translating it into informal proof[^7].
-- force the theorem provers model to generate natural proofs. This is what [Kimina-Prover](https://arxiv.org/pdf/2504.11354)[^8] set up to do by following the DeepSeek-R1 recipe of long chain-of-thoughts. Specifically, the model is trained to "think" (literally between <think> </think>tags) mixing informal reasoning and formal code snippet, before ultimately generating the full formalized Lean proof. This leverage the very strong capabalities of recent modern LLM for informal math reasoning with the logical guarantee of formal verification.
+- post-process valid formal proofs into more adequate mathematician-like proofs to make it more concise or readable. That's what work like [ImProver](https://arxiv.org/pdf/2410.04753) have started to explore for formal proofs. On top of which one could apply informalization, i.e. translating it into informal proof[^8].
+- force the theorem provers model to generate natural proofs. This is what [Kimina-Prover](https://arxiv.org/pdf/2504.11354)[^9] set up to do by following the DeepSeek-R1 recipe of long chain-of-thoughts. Specifically, the model is trained to "think" (literally between <think> </think>tags) mixing informal reasoning and formal code snippet, before ultimately generating the full formalized Lean proof. This leverage the very strong capabalities of recent modern LLM for informal math reasoning with the logical guarantee of formal verification.
 
 <figure>
   <img src="/assets/images/kiminaprover.png" alt="Kimina-Prover" style="height: 500px; object-fit: contain;">
@@ -137,14 +136,14 @@ Perhaps the ultimate sign of the misalignement between the two worlds is that th
   <figcaption>Problem 4 from the 2005 IMO.</figcaption>
 </figure>
 
-The limitation of AI benchmarks, where models can exploit similarities between their training data and the benchmark data, is exactly what mathematicians aim for: finding similar problems, equations or formulaes than the ones they are currently facing. In Machine Learning terms, this is simply mathematical semantic search which is often referred to as Mathematical Information Retrieval (MIR)[^9]. The need for [mathematical knowledge management](https://en.wikipedia.org/wiki/Mathematical_knowledge_management) has been clearly expressed by the community for a few decade already.
+The limitation of AI benchmarks, where models can exploit similarities between their training data and the benchmark data, is exactly what mathematicians aim for: finding similar problems, equations or formulaes than the ones they are currently facing. In Machine Learning terms, this is simply mathematical semantic search which is often referred to as Mathematical Information Retrieval (MIR)[^10]. The need for [mathematical knowledge management](https://en.wikipedia.org/wiki/Mathematical_knowledge_management) has been clearly expressed by the community for a few decade already.
 
 Trading the ambivalence of natural language for Mathematics comes with its unique set of challenges, whether notation ambiguity (`G` denotes a group or a graph?), non-trivial semantic equivalences (`n*(n+1)/2` or `∑_{i=1}^n i`?) or even symbolic sensitivity (semantic impact of a change of sign). Those are fundamental limitations for building efficient indexing systems for Mathematics that might explain why current specialised search engines such as [approach.xyz](https://approach0.xyz/search/) or [searchonmath](https://www.searchonmath.com/) are still far from being satisfactory.
 
 As a quick experiment, querying general-purpose commercial LLMs to recognize group structures, such as `G=⟨a,b ∣ a^2=b^2=(ab)2=e⟩`, yields inconsistent yet promising results([Claude](https://claude.ai/share/acaf9ba8-fb8f-4af3-b298-d507bf2c94d6
 ) succeeds immediately, while [ChatGPT](https://chatgpt.com/share/6818b5bc-dfcc-8002-b29f-fd44205f0833) typically fails but can self-correct with ease). This is an encouraging sign that LLMs could help with this retrieval task.
 
-Last but not least, AI’s potential for mathematical discovery goes far beyond simply proving known theorems as it extends to the very generation of new conjectures and hypotheses. Back in 2021, before the rise of LLMs, the paper [Advancing mathematics by guiding human intuition with AI](https://www.nature.com/articles/s41586-021-04086-x) was published in Nature[^10], demonstrating how deep learning can be leveraged for conjecture generation, which eventually led mathematicians to prove new results in knot theory and representation theory. This was one of the first successful instances of ML-assisted conjecture generation. The overall worklow is described below:
+Last but not least, AI’s potential for mathematical discovery goes far beyond simply proving known theorems as it extends to the very generation of new conjectures and hypotheses. Back in 2021, before the rise of LLMs, the paper [Advancing mathematics by guiding human intuition with AI](https://www.nature.com/articles/s41586-021-04086-x) was published in Nature[^11], demonstrating how deep learning can be leveraged for conjecture generation, which eventually led mathematicians to prove new results in knot theory and representation theory. This was one of the first successful instances of ML-assisted conjecture generation. The overall worklow is described below:
 
 <figure>
   <img src="/assets/images/geordie_nature.png" alt="IMO 2005 P4">
@@ -152,7 +151,7 @@ Last but not least, AI’s potential for mathematical discovery goes far beyond 
 </figure>
 
 
-More recently, FunSearch was introduced in yet another Nature paper [Mathematical Discoveries from Program Search with Large Language Models](https://www.nature.com/articles/s41586-023-06924-6)[^11], presenting a novel framework that pairs a pretrained LLM with a systematic evaluator in an evolutionary loop. Rather than searching directly for solutions, FunSearch explores the space of (Python) programs that generate solutions. This approach led to new state-of-the-art constructions in extremal combinatorics. The programs that FunSearch find are often interpretable, allowing mathematicians to understand and refine the discovered strategies.
+More recently, FunSearch was introduced in yet another Nature paper [Mathematical Discoveries from Program Search with Large Language Models](https://www.nature.com/articles/s41586-023-06924-6)[^12], presenting a novel framework that pairs a pretrained LLM with a systematic evaluator in an evolutionary loop. Rather than searching directly for solutions, FunSearch explores the space of (Python) programs that generate solutions. This approach led to new state-of-the-art constructions in extremal combinatorics. The programs that FunSearch find are often interpretable, allowing mathematicians to understand and refine the discovered strategies.
 
 Another notable method is [PatternBoost](https://arxiv.org/pdf/2411.00566) which takes a different approach to automated discovery. It alternates between a local search phase—using classical algorithms to generate promising constructions—and a global phase in which a transformer is trained on the best examples to guide future searches. By blending symbolic search with neural generalization, it demonstrates how ML can help surface mathematical patterns that elude purely human or purely algorithmic approaches.
 
@@ -169,11 +168,12 @@ If AI is to contribute meaningfully to Mathematics, it won’t be by simply outp
 [^4]: See Kevin Buzzard's [take](https://xenaproject.wordpress.com/2025/01/20/think-of-a-number/) on FrontierMath. 
 [^5]: [Here](https://leanprover-community.github.io/undergrad_todo.html) are all the very basic undergraduate mathematic not even formalized in mathlib
 [^6]: One point shy from a gold medal. Also a great example of DeepMind incentives, when the announcement was limited to a marketing publication.
-[^7]: On my limited set of tests, I found Claude 3.7 to do a great job at informalization.
-[^8]: Full disclaimer, I currently work for Project Numina.
-[^9]: [Here](https://arxiv.org/abs/2408.11646) is a very nice and modern survey of the field.
-[^10]: Fun fact, one of the co-author Geordie Williamson, Professor of Mathematics at the University of Sydney was my PhD *rapporteur*.
-[^11]: Because Google's code for FunSearch is surprinsgly incomplete, a complete open source implementation can be found [here](https://github.com/kitft/funsearch).
+[^7]: Kevin Buzzard again detailing [his experience](https://xenaproject.wordpress.com/2019/08/01/imo-2019-q1/)) in formalizing an IMO problem.
+[^8]: On my limited set of tests, I found Claude 3.7 to do a great job at informalization.
+[^9]: Full disclaimer, I currently work for Project Numina.
+[^10]: [Here](https://arxiv.org/abs/2408.11646) is a very nice and modern survey of the field.
+[^11]: Fun fact, one of the co-author Geordie Williamson, Professor of Mathematics at the University of Sydney was my PhD *rapporteur*.
+[^12]: Because Google's code for FunSearch is surprinsgly incomplete, a complete open source implementation can be found [here](https://github.com/kitft/funsearch).
 
 
 
