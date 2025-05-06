@@ -140,7 +140,7 @@ The limitation of AI benchmarks, where models can exploit similarities between t
 
 Trading the ambivalence of natural language for Mathematics comes with its unique set of challenges, whether notation ambiguity (`G` denotes a group or a graph?), non-trivial semantic equivalences (`n*(n+1)/2` or `∑_{i=1}^n i`?) or even symbolic sensitivity (semantic impact of a change of sign). Those are fundamental limitations for building efficient indexing systems for Mathematics that might explain why current specialised search engines such as [approach.xyz](https://approach0.xyz/search/) or [searchonmath](https://www.searchonmath.com/) are still far from being satisfactory.
 
-As a quick experiment, querying general-purpose commercial LLMs to recognize group structures, such as `G=⟨a,b ∣ a^2=b^2=(ab)^2=e⟩`, yields inconsistent yet promising results([Claude](https://claude.ai/share/acaf9ba8-fb8f-4af3-b298-d507bf2c94d6
+As a quick experiment, querying general-purpose commercial LLMs to recognize group structures, such as `G=⟨a,b ∣ a^2=b^2=(ab)2=e⟩`, yields inconsistent yet promising results([Claude](https://claude.ai/share/acaf9ba8-fb8f-4af3-b298-d507bf2c94d6
 ) succeeds immediately, while [ChatGPT](https://chatgpt.com/share/6818b5bc-dfcc-8002-b29f-fd44205f0833) typically fails but can self-correct with ease). This is an encouraging sign that LLMs could help with this retrieval task.
 
 Last but not least, AI’s potential for mathematical discovery goes far beyond simply proving known theorems as it extends to the very generation of new conjectures and hypotheses. Back in 2021, before the rise of LLMs, the paper [Advancing mathematics by guiding human intuition with AI](https://www.nature.com/articles/s41586-021-04086-x) was published in Nature[^10], demonstrating how deep learning can be leveraged for conjecture generation, which eventually led mathematicians to prove new results in knot theory and representation theory. This was one of the first successful instances of ML-assisted conjecture generation. The overall worklow is described below:
@@ -167,12 +167,12 @@ If AI is to contribute meaningfully to Mathematics, it won’t be by simply outp
 [^3]: We say "sota" because we would feel too self-conscious where we to actually say "state-of-the-art".
 [^4]: See Kevin Buzzard's [take](https://xenaproject.wordpress.com/2025/01/20/think-of-a-number/) on FrontierMath. 
 [^5]: [Here](https://leanprover-community.github.io/undergrad_todo.html) are all the very basic undergraduate mathematic not even formalized in mathlib
-[^6]: One point shy from a gold medal. Also a great example of DeepMind incentive, when the announcement was limited to a marketing publication.
+[^6]: One point shy from a gold medal. Also a great example of DeepMind incentives, when the announcement was limited to a marketing publication.
 [^7]: On my limited set of tests, I found Claude 3.7 to do a great job at informalization.
 [^8]: Full disclaimer, I currently work for Project Numina.
 [^9]: [Here](https://arxiv.org/abs/2408.11646) is a very nice and modern survey of the field.
 [^10]: Fun fact, one of the co-author Geordie Williamson, Professor of Mathematics at the University of Sydney was my PhD *rapporteur*.
-[^11]: Because Google's code for FunSearch is incomplete, a complete open source implementation can be found [here](https://github.com/kitft/funsearch).
+[^11]: Because Google's code for FunSearch is surprinsgly incomplete, a complete open source implementation can be found [here](https://github.com/kitft/funsearch).
 
 
 
