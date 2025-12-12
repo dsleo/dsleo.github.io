@@ -125,7 +125,23 @@ Bitoun’s experience adds a complementary perspective. He distinguishes sharply
 
 [Hugo Duminil-Copin](https://www.unige.ch/~duminil/), at IHES and Geneva, extended this line of thought to the structure of proofs themselves as mathematicians write in sharply different styles. Some provide exhaustive details while others presents an almost telegraphic chain of ideas. Reading across these stylistic gaps can be surprisingly hard. The prospect of AI tools that can adapt a proof into a different style, denser or more explicit, lighter or more conceptual,would in his view, be genuinely valuable.
 
-Across these conversations, the emerging picture is of course not one of replacement, but of delegation. AI should be entering mathematics first through the pressure points: translation between notations, routine verification, exhaustive searches, and mechanical transformations of proofs, and diagrams. It is not approaching the core act of discovery—the human, social, disciplinary fabric described earlier—but rather the tasks that slow, distract, and exhaust the people engaged in it
+Across these conversations, the emerging picture is of course not one of replacement, but of delegation. AI should be entering mathematics first through the pressure points: translation between notations, routine verification, exhaustive searches, and mechanical transformations of proofs. It is not approaching the core act of discovery—the human, social, disciplinary fabric described earlier—but rather the tasks that slow, distract, and exhaust the people engaged in it.
+
+This shift, from replacement to empowerment, is exactly what Terence Tao envisions for the future of the discipline.
+<figure>
+<img src="/assets/images/tao.jpg" alt="Terence Tao on the future of AI in math">
+<figcaption>
+Terence Tao on the changing nature of mathematical research.
+</figcaption>
+</figure>
+
+### One final note
+
+For those interested in the broader debate surrounding these changes, two recent articles that capture the current moment well:
+
+- On the tension between hype and reality: Emily Riehl investigates [why mathematicians question AI performance at the IMO](https://www.scientificamerican.com/article/mathematicians-question-ai-performance-at-international-math-olympiad/?utm_source=chatgpt.com).
+
+- On the nature of proof: Quanta Magazine explores the changing landscape of [mathematical beauty, truth, and proof in the age of AI](https://www.quantamagazine.org/mathematical-beauty-truth-and-proof-in-the-age-of-ai-20250430/?utm_source=chatgpt.com).
 
 ---
 {: data-content="footnotes"}
