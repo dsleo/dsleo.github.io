@@ -1,0 +1,10 @@
+# Site settings
+title: "Stella Benchmark"
+description: "A benchmark for evaluating AI models on mathematical reasoning"
+baseurl: ""         # leave blank for root deployment
+url: "https://turnstile-labs.github.io/stella"  # your GitHub Pages URL
+
+# Optional: Enable math support if you add MathJax later
+markdown: kramdown
+kramdown:
+  input: GFM
