@@ -171,4 +171,4 @@ For those interested in the broader debate surrounding these changes, two recent
 [^2]: As already discussed in my previous [post](https://dsleo.github.io/llm/2025/04/18/ai-for-mathematicians.html).
 [^3]: See this reddit thread [AI misinformation and Erdos problems](https://www.reddit.com/r/math/comments/1ob2v7t/ai_misinformation_and_erdos_problems/).
 [^4]: Following the best practice of ["The Mom Test"](https://www.momtestbook.com/).
-[^5]: Similar to a very nice undergrad course from Patrick Massot where Lean code is displayed next to the informal mathematics based on [lean-verbose](https://github.com/PatrickMassot/verbose-lean4).
+[^5]: Similar to a [very nice undergrad course](https://www.imo.universite-paris-saclay.fr/~patrick.massot/mdd154/) from [Patrick Massot](https://www.imo.universite-paris-saclay.fr/~patrick.massot/) where Lean code is displayed next to the informal mathematics based on [lean-verbose](https://github.com/PatrickMassot/verbose-lean4).
