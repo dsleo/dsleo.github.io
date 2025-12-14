@@ -96,9 +96,12 @@ Ideas also require time to ripen. [Olivier Dudas](https://www.i2m.univ-amu.fr/pe
 
 Even once a promising idea appears, the literature can be a treacherous landscape. Conceptual searches are often futile: equivalent ideas may be expressed in very different vocabulary, and minor notational differences can obscure connections. Lemmas and intermediate results are often buried deep in long papers with opaque references, creating a persistent fear of rediscovery.
 
+A mathematician from ENS Paris working in control theory noted that literature search is rarely a matter of exact queries. “Try asking: find all the papers that deal with *Cauchy–Lipschitz without continuity in time*,” he explained. “What you really mean might also be *Picard–Delécluse*, or something phrased entirely differently.” In practice, the task is one of fuzzy concept matching, *i.e.* recognizing equivalence across shifting names, traditions, and notations.
+
 Sabin provided a vivid example: a few years ago, a Japanese mathematician published a result close to his own. The references included a proof from the 1980s by Russian mathematicians, but the abstraction was so high that recognizing the connection was far from obvious. 
 
-[Samuel Le Fourn](https://www-fourier.univ-grenoble-alpes.fr/~lefourns/), a number theorist at the Institut Fourier, described the emotional cost attached with literature search: “There’s a constant fear of duplicating work that someone, somewhere, proved decades ago.”
+[Samuel Le Fourn](https://www-fourier.univ-grenoble-alpes.fr/~lefourns/), a number theorist at the Institut Fourier, described the emotional cost attached with literature search:
+>“There’s a constant fear of duplicating work that someone, somewhere, proved decades ago.”
 
 Dudas has faced similar obstacles. He joined a lab focused on automorphic forms, far from his original area of expertise, representation theory. Working with a postdoc, they tried to extend a result specific to GLₙ, but it didn’t work. The postdoc suggested replacing it with the “theta correspondence,” yet keyword searches turned up nothing. Notational differences made the papers difficult to access: the π used for p-adic representations instead of the ρ familiar from classical representation theory. “You can’t just skim the document,” Dudas explained. “You have to translate it into your own language and reconstruct the argument yourself.” One of the essential references they eventually relied on was a paper they never would have discovered without already knowing exactly what to look for.
 
@@ -117,13 +120,31 @@ A noticeable shift occurred this year in the way mathematicians talk about AI. T
 
 Yet even here, the current AI tools remain far from frictionless. [Thomas Leblé](https://tleble.perso.math.cnrs.fr/), CNRS researcher at Paris Cité, notes that the interface is often a hindrance: “The chat is just not meant to do math; each small modification or correction leads to a new generation of text that you have to carefully check...again”.
 
+### Formalization, Learning, and Understanding
+This frustration has led some mathematicians to separate two very different uses of computation: conversational tools that assist with drafting, coding, or exploration, and formal proof assistants. Samuel Le Fourn, for instance, expressed genuine curiosity about proof assistants such as Lean. He even floated a radical idea. Temporarily pausing the production of new results in order to formally encode all existing knowledge. 
+
+Bitoun’s experience adds a complementary perspective. He distinguishes sharply between mathematical training and mathematical practice: “Having a PhD in math is not the same as knowing how to do math.” Some AI for Math teams include researchers with advanced mathematical backgrounds, he said, but they still lack the lived sense of how mathematicians actually work. 
+He believes the most transformative tools will be those capable of writing and adapting SAGE or MAGMA code, allowing mathematicians to test hypotheses more easily and then offload the tedious lemmas  no one wants to prove by hand to formal provers.
+
+Yet even in that scenario, formal verification does not carry epistemic authority on its own. As Bitoun put it:
+
+>“If someone tells me something is true, I don’t believe it just because it’s a computer saying so. It still has to make sense within my own understanding of things.” 
+
+For him, formal provers are valuable insofar as they absorb mechanical burden, not because they replace mathematical judgment.
+
+This distinction becomes particularly clear in teaching. In courses such as group theory, he has found that learning Lean can help students better grasp the structure of proofs, by forcing every logical step to be made explicit[^5]. The tool does not confer understanding automatically, but it can train it.
+
+### Writing, Reading, and the Social Epistemology of Math
 [Paul Bourgade](https://cims.nyu.edu/~bourgade/), professor at the Courant Institute and editor at the Annals of Probability, sees another dimension: the steady rise of AI-generated submissions. Thankfully, the pattern is unmistakable currently as papers are either composed almost entirely of trivialities or, at the other extreme, wildly speculative claims backed by vague proofs. None are publishable, but the trend signals an impending difficulty. “One day, that won’t be the case anymore.” At some point, distinguishing machine-generated work from genuine submissions may become impossible.
 
-This perspective shapes his vision for scientific publishing. In an ideal world, journals would not serve as reputational gatekeepers. Everything would live on arXiv, with human commentary and AI systems verifying proofs, ensuring consistency, and clarifying exposition; journals would certify correctness and nothing more. 
+This perspective shapes his vision for scientific publishing. In an ideal world, journals would not serve as reputational gatekeepers. Everything would live on arXiv, with human commentary and AI systems verifying proofs, ensuring consistency, and clarifying exposition; journals would certify correctness and nothing more.
 
-Bitoun’s experience adds a complementary perspective. He distinguishes sharply between mathematical training and mathematical practice: “Having a PhD in math is not the same as knowing how to do math.” Some AI for Math teams include researchers with advanced mathematical backgrounds, he said, but they still lack the lived sense of how mathematicians actually work. He believes the most transformative tools will be those capable of writing and adapting SAGE or MAGMA code, allowing mathematicians to test hypotheses more easily and then offload the tedious lemmas  no one wants to prove by hand to formal provers.
+Leblé framed the issue more broadly as a crisis of reading rather than writing:
+>“If we give people the means to write more papers, but not the means to read more, it makes no sense".
 
-[Hugo Duminil-Copin](https://www.unige.ch/~duminil/), at IHES and Geneva, extended this line of thought to the structure of proofs themselves as mathematicians write in sharply different styles. Some provide exhaustive details while others presents an almost telegraphic chain of ideas. Reading across these stylistic gaps can be surprisingly hard. The prospect of AI tools that can adapt a proof into a different style, denser or more explicit, lighter or more conceptual,would in his view, be genuinely valuable.
+The problem is not only whether a result is correct or incorrect—beyond formal verification—but whether it is usable, relevant, or genuinely interesting. What mathematicians need, he suggested, are tools that help answer a different question: what is *worth* reading, and what can I actually use? 
+
+[Hugo Duminil-Copin](https://www.unige.ch/~duminil/), at IHES and Geneva, extended this line of thought to the structure of proofs themselves as mathematicians write in sharply different styles. Some provides exhaustive details while others presents an almost telegraphic chain of ideas. Reading across these stylistic gaps can be surprisingly hard. The prospect of AI tools that can adapt a proof into a different style, denser or more explicit, lighter or more conceptual,would in his view, be genuinely valuable.
 
 Across these conversations, the emerging picture is of course not one of replacement, but of delegation. AI should be entering mathematics first through the pressure points: translation between notations, routine verification, exhaustive searches, and mechanical transformations of proofs. It is not approaching the core act of discovery—the human, social, disciplinary fabric described earlier—but rather the tasks that slow, distract, and exhaust the people engaged in it.
 
@@ -150,3 +171,4 @@ For those interested in the broader debate surrounding these changes, two recent
 [^2]: As already discussed in my previous [post](https://dsleo.github.io/llm/2025/04/18/ai-for-mathematicians.html).
 [^3]: See this reddit thread [AI misinformation and Erdos problems](https://www.reddit.com/r/math/comments/1ob2v7t/ai_misinformation_and_erdos_problems/).
 [^4]: Following the best practice of ["The Mom Test"](https://www.momtestbook.com/).
+[^5]: Similar to a very nice undergrad course from Patrick Massot where Lean code is displayed next to the informal mathematics based on [lean-verbose](https://github.com/PatrickMassot/verbose-lean4).
