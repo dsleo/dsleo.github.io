@@ -40,6 +40,10 @@ In other cases, the model had solved only a simplified variant, a problem at a l
 
 After watching enough of these cycles, it is hard not to grow weary of the relentless dramatization of AI’s influence on the queen of sciences[^3]. Yet, as a mathematician at heart, I could not help wondering how actual, professional, working mathematicians perceive all of this. Setting aside the noise, what is the real impact of AI on their work? And how do they imagine the future of mathematics and science in an AI-mediated world?
 
+Here is another scene, recounted by a mathematician, this time at a conference. Laptops are open; some attendees are replying to emails, others are taking notes - the usual for the last decades of scientific conference. But there is something new as well. Many members of the audience are quietly conversing with their preferred AI tools, most often Gemini or ChatGPT. While the next speaker fine-tunes his slides, a young postdoc uses the time to ask for a high-level introduction to the topic just presented.
+
+Much of the public narrative remains fixated on AI as an “ultimate prover”. But proving is only a small part of what mathematicians actually do. Most of their time is spent searching, translating, testing ideas, talking to others, navigating the literature, and deciding what is even worth pursuing. What already matters, and what is clearly happening, is that AI is beginning to reshape these ordinary activities. This quieter transformation is far less spectacular than the headlines suggest, but it is precisely where the real impact lies.    
+
 ## Mapping the Everyday Life of Mathematical Research
 
 One can always speculate, whether as an expert or an enthusiastic outsider, drawing on whatever theoretical framework seems convenient whether sociology of science, epistemology, or general intuition about how mathematicians think. But there is also a simpler and more reliable approach which is to ask the people who actually do the work.
@@ -84,8 +88,6 @@ This was not a pre-registered study, but I did design a questionnaire with stand
 </div>
 The responses were then carefully analyzed and distilled, revealing patterns and recurring themes that go beyond individual anecdotes.
 
-Mathematicians do not march neatly from problem to proof. Ideas spark in hallway whispers, blackboard ping-pong, or the  memory of a seminar long past. The literature is a labyrinth where lemmas hide, notations shift, and old results lie buried under pages no one remembers. AI, meanwhile, arrives with promises and hallucinations alike—sometimes helpful, often exasperating. And yet, there is a shared imagination of a future where AI becomes a collaborator that spots dead ends early or help resurface that old result.
-
 ## Sparks, Conversations, and the Social Life of Discovery
 
 Mathematical discovery rarely begins with systematic searches or literature reviews. Instead, it often emerges from small sparks: a remark in a seminar, an unusual notation in a paper, or a casual hallway conversation. Many breakthroughs arise in informal, face-to-face settings, where ideas can be tested, rephrased, or challenged immediately. [Julien Sabin](https://sites.google.com/site/juliensabin/), a junior professor at IRMAR, Université de Rennes, described this dynamic: “Two people at a blackboard can go much further than one alone,” highlighting the value of real-time discussion and iterative reasoning.
@@ -119,6 +121,22 @@ Even with better tools, the terrain remains irregular. [Thomas Bitoun](https://w
 A noticeable shift occurred this year in the way mathematicians talk about AI. The initial reaction “leave me alone with this AI slop and nonsense” has softened. Not into enthusiasm, but into a pragmatic acknowledgment: some tasks genuinely benefit from it. Proving small technical lemmas (though in some domains of math more than in others), converting handwritten notes into LaTeX, producing small diagrams or simulation scripts, are now routinely delegated to AI.
 
 Yet even here, the current AI tools remain far from frictionless. [Thomas Leblé](https://tleble.perso.math.cnrs.fr/), CNRS researcher at Paris Cité, notes that the interface is often a hindrance: “The chat is just not meant to do math; each small modification or correction leads to a new generation of text that you have to carefully check...again”.
+
+### Technical Lemmas and the Grain of Mathematical Work
+During the course of the last year, many mathematicians have noticed that AI systems are becoming surprisingly effective at a very specific task: proving technical lemmas. A technical lemma is a statement that sits inside a larger theory but carries little conceptual overhead. A graduate student from a neighboring field should be able to understand the question.
+
+The experience, however, is often ambivalent. Models can suddenly unlock a key step, only to stumble moments later on something embarrassingly elementary, like dropping a term from one line to the next. This contrast between local brilliance and global fragility is striking, and it reveals both the promise and the limits of current systems.
+
+This observation has motivated me to start a benchmark called [Stella](https://turnstilelabs.github.io/stella/), for Set of Technical Lemmas. 
+
+<figure>
+  <img src="/assets/images/stella.jpg" alt="Stella Benchmark">
+  <figcaption>
+    A benchmark of technical lemmas.
+  </figcaption>
+</figure>
+
+Most existing benchmarks are poorly aligned with actual research practice. They either target toy problems or aim unrealistically high. Technical lemmas occupy a much more meaningful middle ground as they are often accessible to LLMs, yet genuinely useful to mathematicians.
 
 ### Formalization, Learning, and Understanding
 This frustration has led some mathematicians to separate two very different uses of computation: conversational tools that assist with drafting, coding, or exploration, and formal proof assistants. Samuel Le Fourn, for instance, expressed genuine curiosity about proof assistants such as Lean. He even floated a radical idea. Temporarily pausing the production of new results in order to formally encode all existing knowledge. 
