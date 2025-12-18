@@ -23,13 +23,13 @@ After this year IMO, where AI dominated the field[^1], it was Erdös’ problems
   </figcaption>
 </figure>
 
-But the pattern is always the same. A few tweets later, the breakthrough evaporates when mathematicians point out the shortcut — usually that the result was already known, proved in the literature, or simply not that hard. This is exactly what happened in the episode now referred to as the [ErdösGate](https://garymarcus.substack.com/p/erdosgate). The AI had not proved anything new, but surfaced an existing solution in the literature.
+A few tweets later, the breakthrough evaporates when mathematicians point out the shortcut — usually that the result was already known, proved in the literature, or simply not that hard. This is exactly what happened in the episode now referred to as the [ErdösGate](https://garymarcus.substack.com/p/erdosgate). The AI had not proved anything new, but surfaced an existing solution in the literature.
 
-This is then promptly reframed as “if AI is not superhuman at proving, at least it is superhuman at literature search” (as expressed by Sebastian Bubeck [here](https://x.com/SebastienBubeck/status/1977181716457701775)). And this is where the hype often overshoots reality. While the discourse celebrates AI theorem-proving as if it were a superhuman leap, what is genuinely valuable to working mathematicians is often the much more modest ability to accurately retrieve known results[^2].
+This was then reframed as “if AI is not superhuman at proving, at least it is superhuman at literature search” (as expressed by Sebastian Bubeck [here](https://x.com/SebastienBubeck/status/1977181716457701775)). While the discourse celebrates AI theorem-proving as if it were a superhuman leap, what is genuinely valuable to working mathematicians is often the much more modest ability to accurately retrieve known results[^2].
 
 In an even more striking twist, some of these resurfaced “solutions” predated the very formulation of the question (this is the case of the [Forbidden Sidon subsets problem](https://arxiv.org/abs/2510.19804)).
 
-In other cases, the model had solved only a simplified variant, a problem at a level closer to competition mathematics than genuine research, and therefore far from any meaningful advance. And as if further clarification were needed, Thomas Bloom reminded everyone that an "Erdös problem" is not inherently difficult simply because the name Erdös appears in front of it.
+In other cases, the model had solved only a simplified variant, a problem at a level closer to competition mathematics than genuine research. And as if further clarification were needed, Thomas Bloom reminded everyone that an "Erdös problem" is not inherently difficult simply because the name Erdös appears in front of it.
 
 <figure>
   <img src="/assets/images/erdos_problem_difficulty.jpg" alt="Erdös problem ">
@@ -38,7 +38,7 @@ In other cases, the model had solved only a simplified variant, a problem at a l
   </figcaption>
 </figure>
 
-After watching enough of these cycles, it is hard not to grow weary of the relentless dramatization of AI’s influence on the queen of sciences[^3]. Yet, as a mathematician at heart, I could not help wondering how actual, professional, working mathematicians perceive all of this. Setting aside the noise, what is the real impact of AI on their work? And how do they imagine the future of mathematics and science in an AI-mediated world?
+After watching enough of these cycles, it is hard not to grow weary of the relentless dramatization of AI’s influence on Mathematics[^3]. Yet, as a mathematician at heart, I could not help wondering how actual, professional, working mathematicians perceive all of this. Setting aside the noise, what is the real impact of AI on their work? And how do they imagine the future of mathematics and science in an AI-mediated world?
 
 Here is another scene, recounted by a mathematician, this time at a conference. Laptops are open; some attendees are replying to emails, others are taking notes - the usual for the last decades of scientific conference. But there is something new as well. Many members of the audience are quietly conversing with their preferred AI tools, most often Gemini or ChatGPT. While the next speaker fine-tunes his slides, a young postdoc uses the time to ask for a high-level introduction to the topic just presented.
 
@@ -46,13 +46,11 @@ Much of the public narrative remains fixated on AI as an “ultimate prover”. 
 
 ## Mapping the Everyday Life of Mathematical Research
 
-One can always speculate, whether as an expert or an enthusiastic outsider, drawing on whatever theoretical framework seems convenient whether sociology of science, epistemology, or general intuition about how mathematicians think. But there is also a simpler and more reliable approach which is to ask the people who actually do the work.
-
-A brief clarification first. I am not interested here in the philosophical or neuroscientific accounts of mathematical cognition, the interplay between intuition and formal reasoning, or the broader reflections on “how the mind does mathematics” (cf. David Bessis [work](https://davidbessis.substack.com/)). The purpose is far more concrete, it is to understand the ordinary, everyday practice of professional mathematicians.
+One can always speculate, whether as an expert or an enthusiastic outsider, drawing on whatever theoretical framework seems convenient whether sociology of science, epistemology, or general intuition about how mathematicians think. But there is also a simpler and more reliable approach which is to ask the people who actually do the work[^4].
 
 With that goal in mind, I spent the past year speaking with thirty mathematicians, spanning all levels of seniority and a wide variety of fields. From PhD students to emeritus professors, from probability theory to algebraic geometry. I wanted to see what mathematicians actually do when they are not driking coffee and sit down to work. How do they choose problems? How do they make progress? What tools do they rely on? And what role, if any, is AI beginning to play in this workflow?
 
-This was not a pre-registered study, but I did design a questionnaire with standard user-discovery principles in mind, aiming to avoid leading questions and minimize bias[^4]. 
+This was not a pre-registered study, but I did design a questionnaire with standard user-discovery principles in mind, aiming to avoid leading questions and minimize bias[^5]. 
 
 <div style="background-color: #f8f9fa; border: 1px solid #e1e4e8; border-radius: 6px; padding: 20px; font-family: sans-serif; font-size: 0.9em; line-height: 1.6; color: #24292e;">
   
@@ -150,7 +148,7 @@ Yet even in that scenario, formal verification does not carry epistemic authorit
 
 For him, formal provers are valuable insofar as they absorb mechanical burden, not because they replace mathematical judgment.
 
-This distinction becomes particularly clear in teaching. In courses such as group theory, he has found that learning Lean can help students better grasp the structure of proofs, by forcing every logical step to be made explicit[^5]. The tool does not confer understanding automatically, but it can train it.
+This distinction becomes particularly clear in teaching. In courses such as group theory, he has found that learning Lean can help students better grasp the structure of proofs, by forcing every logical step to be made explicit[^6]. The tool does not confer understanding automatically, but it can train it.
 
 ### Writing, Reading, and the Social Epistemology of Math
 [Paul Bourgade](https://cims.nyu.edu/~bourgade/), professor at the Courant Institute and editor at the Annals of Probability, sees another dimension: the steady rise of AI-generated submissions. Thankfully, the pattern is unmistakable currently as papers are either composed almost entirely of trivialities or, at the other extreme, wildly speculative claims backed by vague proofs. None are publishable, but the trend signals an impending difficulty. “One day, that won’t be the case anymore.” At some point, distinguishing machine-generated work from genuine submissions may become impossible.
@@ -188,5 +186,6 @@ For those interested in the broader debate surrounding these changes, two recent
 [^1]: OpenAI and DeepMind first claimed a [gold medal at the 2025 IMO](https://www.newscientist.com/article/2489248-deepmind-and-openai-claim-gold-in-international-mathematical-olympiad/), sparking [controversy](https://arstechnica.com/ai/2025/07/openai-jumps-gun-on-international-math-olympiad-gold-medal-announcement/?utm_source=chatgpt.com) as OpenAI announced its score before the official release. Shortly after followed byformal models such as ByteDance's [SeedProver](https://arxiv.org/abs/2507.23726) and Harmonic's [Aristotle](https://arxiv.org/html/2510.01346v1).)
 [^2]: As already discussed in my previous [post](https://dsleo.github.io/llm/2025/04/18/ai-for-mathematicians.html).
 [^3]: See this reddit thread [AI misinformation and Erdos problems](https://www.reddit.com/r/math/comments/1ob2v7t/ai_misinformation_and_erdos_problems/).
-[^4]: Following the best practice of ["The Mom Test"](https://www.momtestbook.com/).
-[^5]: Similar to a [very nice undergrad course](https://www.imo.universite-paris-saclay.fr/~patrick.massot/mdd154/) from [Patrick Massot](https://www.imo.universite-paris-saclay.fr/~patrick.massot/) where Lean code is displayed next to the informal mathematics based on [lean-verbose](https://github.com/PatrickMassot/verbose-lean4).
+[^4]: A brief clarification first. I am not interested here in the philosophical or neuroscientific accounts of mathematical cognition, the interplay between intuition and formal reasoning, or the broader reflections on “how the mind does mathematics” (cf. David Bessis [work](https://davidbessis.substack.com/)). The purpose is far more concrete, it is to understand the ordinary, everyday practice of professional mathematicians.
+[^5]: Following the best practice of ["The Mom Test"](https://www.momtestbook.com/).
+[^6]: Similar to a [very nice undergrad course](https://www.imo.universite-paris-saclay.fr/~patrick.massot/mdd154/) from [Patrick Massot](https://www.imo.universite-paris-saclay.fr/~patrick.massot/) where Lean code is displayed next to the informal mathematics based on [lean-verbose](https://github.com/PatrickMassot/verbose-lean4).
