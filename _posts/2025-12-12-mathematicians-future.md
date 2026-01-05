@@ -5,7 +5,7 @@ slug: mathematicians future
 category: maths
 ---
 
-Here is a familiar scene from the modern "AI for Math" narrative. One of our usual AI evangelists (typically from OpenAI, 👋 Sebastian) announces, with maximal volume on social media, that AGI is upon us. The latest AI model has just proved a result beyond the reach of any human mathematician!
+Here is a familiar scene from the modern "AI for Math" narrative. One of our usual AI evangelists (typically from OpenAI, 👋 Sebastien) announces, with maximal volume on social media, that AGI is upon us. The latest AI model has just proved a result beyond the reach of any human mathematician!
 
 <figure>
   <img src="/assets/images/bubeck.jpg" alt="A claim of AI Math supremacy">
