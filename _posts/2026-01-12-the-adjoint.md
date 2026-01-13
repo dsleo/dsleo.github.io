@@ -33,7 +33,7 @@ The #1 pain point that consistently resurfaced in discussions with mathematician
   <figcaption>How a mathematician feels fixing an AI proof.</figcaption>
 </figure>
 
-Often a simple mistake (a wrong sign, a forgotten terms,...) would slip into the AI's output amidst an otherwise genuine helpful proof. Such errors would be immediately forgiven if made by a human, but not by an AI. Once again, the mathematician must point out the mistake, only for the model to stumble and generate excuses… before producing an entirely new proof from scratch.
+Often a simple mistake (a wrong sign, a forgotten term,...) would slip into the AI's output amidst an otherwise genuine helpful proof. Such errors would be immediately forgiven if made by a human, but not by an AI. Once again, the mathematician must point out the mistake, only for the model to stumble and generate excuses… before producing an entirely new proof from scratch.
 
 To address these issues, we can take two complementary approaches:
 1. Decompose the proof attempt into intermediate results, lemmas, together with their logical dependency graph, so that we can ask for modification of one component without altering the others. 
