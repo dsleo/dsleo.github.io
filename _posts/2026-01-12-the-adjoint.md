@@ -16,7 +16,7 @@ I could not help feeling that my professional trajectory was finally starting to
   <figcaption>Dataiku Platform</figcaption>
 </figure>
 
-My role there was to turn projects with significant scientific uncertainty but clear business potential into actionable product features. The first initiative focused on optimizing data labeling—primarily through active learning (through active learning [cardinal](https://github.com/dataiku-research/cardinal) mainly) while the last revolved around [causal inference](https://dsleo.github.io/causal/2023/05/11/causal-metrics.html).
+My role there was to turn projects with significant scientific uncertainty but clear business potential into actionable product features. The first initiative focused on optimizing data labeling (through active learning [cardinal](https://github.com/dataiku-research/cardinal) mainly) while the last revolved around [causal inference](https://dsleo.github.io/causal/2023/05/11/causal-metrics.html).
 
 In retrospect, this placed me at the perfect intersection: a deep understanding of, and empathy for, mathematicians on the one hand, and hands-on experience building software products on the other. 
 
