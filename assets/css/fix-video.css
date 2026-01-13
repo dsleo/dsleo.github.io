@@ -1,0 +1,15 @@
+/*
+  The theme uses `filter: invert(1)` on the whole body in dark mode.
+  That also inverts embedded iframes (Loom, etc.).
+  Counteract it specifically for Loom embeds.
+*/
+
+body[a="dark"] iframe[src*="loom.com"] {
+    filter: invert(1) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    body[a="auto"] iframe[src*="loom.com"] {
+        filter: invert(1) !important;
+    }
+}

@@ -118,14 +118,14 @@ After building all of the above, we needed a name for what we had started creati
 
 And for inasmuch as the models we rely on are occasionally forgetful, the adjoint is free[^4] and [open source](https://github.com/turnstilelabs/adjoint)!
 
-GIF at the end/ loom?
+<div style="position: relative; padding-bottom: 59.66850828729282%; height: 0;"><iframe src="https://www.loom.com/embed/aad729dcc3ce45629aa07aec870f2f86" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ## What's next?
 
-This is a first prototype to start and collect feedback. It's rough around the edges and there are still many features to add. Validation of lemmas and local statements with symbolic engines such as Sympy or with formal languages such as Lean or Rocq, running numerical experiments in Python, and of course literature search. 
-Ah and of course, there is always some improvement to be made on the display of LaTeX, but we might have to wait for AGI to finally fix that...
+This is a first prototype to start and collect feedback. It's rough around the edges and there are still many features to add. Validation of lemmas and local statements with symbolic engines such as Sympy or with formal languages such as Lean or Rocq, running numerical experiments in Python, or a proper literature search. 
+Ah and of course, there is always some improvement to be made on robust display of LaTeX, but we might have to wait for AGI to finally fix that...
 
-In the mean time, you can open an issue or a PR directly on [github](https://github.com/turnstilelabs/adjoint) to help shape your Adjoint.
+In the mean time, you can share your ideas and contribute on [github](https://github.com/turnstilelabs/adjoint) to help shape your Adjoint.
 
 ---
 {: data-content="footnotes"}
