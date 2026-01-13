@@ -64,7 +64,7 @@ To detect it, we run a first LLM over the original proof attempt to determine wh
 
 ## Wait, what if there is no statement to be proved... in the first place?!
 
-As extensivly argued in [previous](https://dsleo.github.io/llm/2025/04/18/ai-for-mathematicians.html) [posts](https://dsleo.github.io/maths/2025/12/12/mathematicians-future.html), proving is only a small fraction of a mathematician activity. Mathematicians also use AI models for a variety of exploratory tasks. A natural extension of proving is exploration: starting from a half-baked statement or an open question, the mathematician begins a discussion that may eventually yield statements worth proving or disproving.
+As extensivly argued in [previous](https://dsleo.github.io/llm/2025/04/18/ai-for-mathematicians.html) [posts](https://dsleo.github.io/maths/2025/12/12/mathematicians-future.html), proving is only a small fraction of a mathematician's activity. Mathematicians also use AI models for a variety of exploratory tasks. A natural extension of proving is exploration: starting from a half-baked statement or an open question, the mathematician begins a discussion that may eventually yield statements worth proving or disproving.
 
 <figure>
 <img src="/assets/images/tao_chatgpt.jpg" alt="Tao exploration with ChatGPT">
