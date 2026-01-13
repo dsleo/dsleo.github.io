@@ -7,7 +7,7 @@ category: maths
 
 What do you do after interviewing so many mathematicians to understand how [their practice is evolving](https://dsleo.github.io/maths/2025/12/12/mathematicians-future.html)? After listening to them describe the newly discovered tools they have come to love[^1], alongside their long-standing frustrations?
 
-I could not help feeling that my professional trajectory was finally starting to make sense. I began as an apprentice mathematician, playing with commutative diagrams and categorification. Later, I joined a data analytics company called [Dataiku](https://www.dataiku.com/), an early startup at the time, back in 2015 whose product was an end-to-end collaborative platform designed to democratize access to machine learning.
+I could not help feeling that my professional trajectory was finally starting to make sense. I began as an apprentice mathematician, playing with commutative diagrams and categorification. Later, I joined a data analytics company called [Dataiku](https://www.dataiku.com/), an early startup at the time, back in 2015, whose product was an end-to-end collaborative platform designed to democratize access to machine learning.
 
 <figure style="text-align: center;">
   <img src="https://www.dataiku.com/wp-content/uploads/2024/01/Dataiku-Infrastructure-Infographic-.png" 
