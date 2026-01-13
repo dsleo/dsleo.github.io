@@ -1,1 +1,1 @@
-# blog
+# Learning Curve Blog
