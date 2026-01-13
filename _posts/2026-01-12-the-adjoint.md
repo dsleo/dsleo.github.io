@@ -7,6 +7,9 @@ category: maths
 
 What do you do after interviewing so many mathematicians to understand how [their practice is evolving](https://dsleo.github.io/maths/2025/12/12/mathematicians-future.html)? After listening to them describe the newly discovered tools they have come to love[^1], alongside their long-standing frustrations?
 
+This post describes the first prototype of The Adjoint, an open-source, AI-assisted workspace designed to support the way mathematicians explore, organize, and iterate on mathematical work.
+
+## Base Case: My Mathematical Trajectory
 I could not help feeling that my professional trajectory was finally starting to make sense. I began as an apprentice mathematician, playing with commutative diagrams and categorification. Later, I joined a data analytics company called [Dataiku](https://www.dataiku.com/), an early startup at the time, back in 2015, whose product was an end-to-end collaborative platform designed to democratize access to machine learning.
 
 <figure style="text-align: center;">
@@ -64,7 +67,7 @@ To detect it, we run a first LLM over the original proof attempt to determine wh
 
 ## Wait, what if there is no statement to be proved... in the first place?!
 
-As extensivly argued in [previous](https://dsleo.github.io/llm/2025/04/18/ai-for-mathematicians.html) [posts](https://dsleo.github.io/maths/2025/12/12/mathematicians-future.html), proving is only a small fraction of a mathematician's activity. Mathematicians also use AI models for a variety of exploratory tasks. A natural extension of proving is exploration: starting from a half-baked statement or an open question, the mathematician begins a discussion that may eventually yield statements worth proving or disproving.
+As extensively argued in [previous](https://dsleo.github.io/llm/2025/04/18/ai-for-mathematicians.html) [posts](https://dsleo.github.io/maths/2025/12/12/mathematicians-future.html), proving is only a small fraction of a mathematician's activity. Mathematicians also use AI models for a variety of exploratory tasks. A natural extension of proving is exploration: starting from a half-baked statement or an open question, the mathematician begins a discussion that may eventually yield statements worth proving or disproving.
 
 <figure>
 <img src="/assets/images/tao_chatgpt.jpg" alt="Tao exploration with ChatGPT">
@@ -76,7 +79,8 @@ As extensivly argued in [previous](https://dsleo.github.io/llm/2025/04/18/ai-for
 
 This changes the nature of the initial input to the app. There should be two modes: *explore* and *prove*, with smooth transitions between them. In this context, the chat interface is the natural candidate for exploration, enabling dialogue with the AI model. But, as before, chat is not the end point. We enhance the interaction by constantly scanning for the linguistic components of the mathematical discourse (statements, hypotheses, or examples) so that attempting a proof is always just a click away.
 
-## A Product Aparté: Interfaces, Models, and Hidden Assumptions
+## Interfaces, Models, and Hidden Assumptions
+With the feature set and interaction modes in place, it’s worth stepping back to examine some broader design considerations. How we structure interfaces, integrate AI models, and account for hidden assumptions fundamentally shaped the product.
 
 **Is every interface converging to a chat?** On one hand, the chat interface is simple, versatile, and almost Zen in its minimalism. On the other hand, as the de facto default in a post-ChatGPT world, it can feel lazy and unfocused. As noted earlier regarding iteration, relying on chat as the alpha and omega of the user interface often comes with significant drawbacks.
 
@@ -125,7 +129,7 @@ And for inasmuch as the models we rely on are occasionally forgetful, the adjoin
 This is a first prototype to start and collect feedback. It's rough around the edges and there are still many features to add. Validation of lemmas and local statements with symbolic engines such as Sympy or with formal languages such as Lean or Rocq, running numerical experiments in Python, or a proper literature search. 
 Ah and of course, there is always some improvement to be made on robust display of LaTeX, but we might have to wait for AGI to finally fix that...
 
-In the mean time, you can share your ideas and contribute on [github](https://github.com/turnstilelabs/adjoint) to help shape your Adjoint.
+In the meantime, you can share your ideas and contribute on [github](https://github.com/turnstilelabs/adjoint) to help shape your Adjoint.
 
 ---
 {: data-content="footnotes"}
