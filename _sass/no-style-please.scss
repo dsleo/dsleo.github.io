@@ -165,6 +165,10 @@ blockquote {
   margin: 0;
 }
 
+.abstract+* {
+  margin-top: 2rem;
+}
+
 img {
   max-width: 100%;
   display: block;

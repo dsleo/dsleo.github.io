@@ -5,6 +5,16 @@ slug: mathematicians future
 category: maths
 ---
 
+<div class="abstract">
+<strong>TL;DR</strong> I interviewed 30 mathematicians about how AI is entering their research practice. The near-term story is not “AI proves new theorems”, but delegation of friction.
+
+<ul>
+  <li><strong>What’s real:</strong> literature navigation, drafting LaTeX/code, and occasional help on technical lemmas.</li>
+  <li><strong>Main friction:</strong> hallucinated citations + chat-style iteration makes for a poor UX.</li>
+  <li><strong>Big picture:</strong> the near future looks like infrastructure for <em>search</em> and <em>understanding</em>, not an “ultimate prover”.</li>
+</ul>
+</div>
+
 Here is a familiar scene from the modern "AI for Math" narrative. One of our usual AI evangelists (typically from OpenAI, 👋 Sebastien) announces, with maximal volume on social media, that AGI is upon us. The latest AI model has just proved a result beyond the reach of any human mathematician!
 
 <figure>
