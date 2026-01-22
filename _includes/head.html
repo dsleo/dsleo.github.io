@@ -14,7 +14,22 @@
   {%-seo title=false-%}
   {%-feed_meta-%}
 
-  <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
+  <!-- Open Graph / social preview -->
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ page.og_image | default: site.default_og_image }}">
+<meta property="og:site_name" content="{{ site.title }}">
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines }}">
+<meta name="twitter:image" content="{{ page.og_image | default: site.default_og_image }}">
+
+
+<link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
 
   <!-- for MathJax support -->
