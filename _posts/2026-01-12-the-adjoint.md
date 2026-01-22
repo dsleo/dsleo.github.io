@@ -3,6 +3,8 @@ layout: post
 title: "Proof by Construction: Building a Mathematician's Assistant"
 slug: the adjoint
 category: maths
+image: /assets/images/adjoint_homepage.png   
+og_image: /assets/images/adjoint_homepage.png
 ---
 
 What do you do after interviewing so many mathematicians to understand how [their practice is evolving](https://dsleo.github.io/maths/2025/12/12/mathematicians-future.html)? After listening to them describe the newly discovered tools they have come to love[^1], alongside their long-standing frustrations?
