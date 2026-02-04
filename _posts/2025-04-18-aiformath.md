@@ -3,6 +3,8 @@ layout: post
 title: "Assistants of Abstraction: Proofs & Machines"
 slug: ai for mathematicians
 category: llm
+image: /assets/images/ai_death.png   
+og_image: /assets/images/ai_death.png
 ---
 
 The age-old tale of technology replacing human workers is playing out once again. Only this time, it’s on speakerphone, stuck on repeat and the technology is Artificial Intelligence.
