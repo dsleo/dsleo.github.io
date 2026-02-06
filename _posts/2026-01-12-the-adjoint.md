@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Proof by Construction: Building a Mathematician's Assistant"
-slug: the-math-adjoint
+slug: the-adjoint
 category: maths
 image: /assets/images/adjoint_homepage.png   
 og_image: /assets/images/adjoint_homepage.png
