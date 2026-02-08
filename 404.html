@@ -1,25 +1,162 @@
 ---
 permalink: /404.html
 layout: default
+usemathjax: true
+custom_js:
+- 404-brownian
 ---
 
 <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
+  .not-found {
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  .not-found h1 {
+    margin: 0 0 1rem;
+    font-size: 2.2rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .not-found .meta {
+    opacity: 0.85;
+    margin: 0.75rem 0 1.5rem;
+  }
+
+  .not-found .escape {
+    margin: 1.25rem 0 0;
     text-align: center;
   }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
+
+  .not-found .escape a {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  .viz {
+    margin: 1.5rem 0 0;
+    border: thin solid black;
+    background: #fafafa;
+    box-shadow: 4px 4px 0 0 black;
+    padding: 0;
+  }
+
+  #brownian404 {
+    width: 100%;
+    height: 340px;
+    display: block;
+    background: white;
+  }
+
+  .hint {
+    margin: 0.75rem 0 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+  }
+
+  .hint .hint-line {
+    display: inline;
+  }
+
+  details.viz-help {
+    display: inline;
+    margin-left: 0.4rem;
+    opacity: 1;
+  }
+
+  details.viz-help>summary {
+    display: inline;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  details.viz-help>summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details.viz-help .viz-help-box {
+    margin-top: 0.75rem;
+    border: thin solid black;
+    background: #fafafa;
+    box-shadow: 4px 4px 0 0 black;
+    padding: 0.75rem 0.9rem;
+    opacity: 1;
+  }
+
+  details.viz-help .viz-help-box p {
+    margin: 0.5rem 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #brownian404 {
+      display: none;
+    }
+
+    .hint {
+      display: none;
+    }
   }
 </style>
 
-<div class="container">
-  <h1>404</h1>
+<div class="not-found">
+  <h1>Theorem (404).</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <div class="abstract">
+    <p>
+      <strong>Statement.</strong>
+      The page at <code id="nf-path">this URL</code> does not exist.
+    </p>
+    <p>
+      <strong>Proof sketch.</strong>
+      Assume it exists. Then your browser would have something to render.
+      Contradiction.
+    </p>
+  </div>
+
+  <p class="meta">
+    If you were looking for a lemma in the literature, this is the part where the reference
+    turns out to be a typo.
+  </p>
+
+  <p class="escape">
+    Escape hatch: <a href="/">Home</a>.
+  </p>
+
+  <div class="viz" aria-label="A small visualization that gradually reveals 404 using a random walk.">
+    <canvas id="brownian404" role="img" aria-label="Brownian motion drawing 404"></canvas>
+  </div>
+
+  <div class="hint">
+    <span class="hint-line">Random walk with a weak drift toward an invisible stencil.</span>
+    <details class="viz-help">
+      <summary aria-label="Explain the visualization">ⓘ</summary>
+      <div class="viz-help-box" tabindex="-1">
+        <p>
+          <strong>Idea.</strong> First, the page draws an invisible outline of “404” on a hidden canvas and
+          records lots of points along that outline.
+        </p>
+        <p>
+          Then it releases many “walkers” whose position \(x_t \in \mathbb{R}^2\) evolves by a random step plus
+          a small drift toward a target outline point \(p\):
+          \[
+          x_{t+1} = x_t + \varepsilon_t + \eta (p - x_t),
+          \]
+          with \(\varepsilon_t \sim \mathcal N(0, \sigma^2 I)\). In practice \(\eta\) is a small, hand-tuned
+          constant (relative to \(\sigma\)) that gently steers walkers toward the outline without making them
+          collapse onto a single point.
+        </p>
+        <p>
+          Each walker occasionally switches to a different target \(p\). Crucially, it only deposits ink when it
+          is close to the outline, e.g. when \(\lVert x_t - p \rVert \le r\). This keeps the interior of the digits
+          mostly clean.
+        </p>
+        <p>
+          Over time, the accumulated ink makes the outline of “404” emerge.
+        </p>
+      </div>
+    </details>
+  </div>
 </div>
