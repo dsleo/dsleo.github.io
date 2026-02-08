@@ -2,6 +2,7 @@
 layout: post
 title: "No Free Lunch For LLMs"
 slug: no free lunch for llm
+category: llm
 ---
 
 

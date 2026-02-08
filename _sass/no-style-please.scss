@@ -169,6 +169,48 @@ blockquote {
   margin-top: 2rem;
 }
 
+// Small homepage visualization (inspired by the 404 page)
+.viz {
+  margin: 1.5rem 0 0;
+  border: thin solid black;
+  background: #fafafa;
+  box-shadow: 4px 4px 0 0 black;
+  padding: 0;
+}
+
+.home-viz {
+  margin-top: 1.75rem;
+}
+
+// Give the homepage viz a bit more horizontal room than the main text column.
+// This reduces early overlap between curves while keeping the rest of the page narrow.
+.home-viz {
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+}
+
+@media (min-width: 720px) {
+  .home-viz {
+    margin-left: -2.25rem;
+    margin-right: -2.25rem;
+  }
+}
+
+#homeCurves {
+  width: 100%;
+  height: 260px;
+  display: block;
+  background: white;
+}
+
+@media (min-width: 720px) {
+  #homeCurves {
+    height: 300px;
+  }
+}
+
+
+
 img {
   max-width: 100%;
   display: block;

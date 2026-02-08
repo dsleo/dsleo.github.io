@@ -2,7 +2,7 @@
 layout: post
 title: "Assistants of Abstraction: Proofs & Machines"
 slug: ai for mathematicians
-category: llm
+category: maths
 image: /assets/images/ai_death.jpg   
 og_image: /assets/images/ai_death.jpg
 ---
