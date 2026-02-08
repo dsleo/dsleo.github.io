@@ -3,7 +3,7 @@ layout: post
 title: "Lost in the Literature: AI and the Problem of Mathematical Search"
 slug: math search engine
 category: maths
-published: true
+published: false
 usemathjax: true
 ---
 
