@@ -144,9 +144,8 @@ custom_js:
           \[
           v_{t+1} = \rho v_t + \eta (p - x_t) + \varepsilon_t, \qquad x_{t+1} = x_t + v_{t+1}.
           \]
-          Here \(0<\rho<1\) is the friction term, and \(\varepsilon_t\) is small component-wise uniform noise (in the
-            code: \(\varepsilon_t \in [-\tfrac{\texttt{noise}}{2},\tfrac{\texttt{noise}}{2}]^2\)). In practice \(\eta\)
-            is hand-tuned so walkers are steered toward the outline without collapsing. </p>
+          Here \(0<\rho<1\) is the friction term, and \(\varepsilon_t\) is small component-wise uniform noise. In
+            practice \(\eta\) is hand-tuned so walkers are steered toward the outline without collapsing. </p>
             <p>
               Each walker occasionally switches to a different target \(p\). Crucially, it only deposits ink when it is
               close to the outline, e.g. when \(\lVert x_t - p \rVert \le r\) (in the code, \(r\approx 18\) pixels).
