@@ -137,6 +137,15 @@ Ah and of course, there is always some improvement to be made on robust display 
 
 In the meantime, you can share your ideas and contribute on [github](https://github.com/turnstilelabs/adjoint) to help shape your Adjoint.
 
+## Updating the Prior
+
+Following the initial release, and thanks to extensive early feedback from both mathematicians and product engineers, several design flaws became clear. In particular, the separation between Explore, Prove, and Write created unnecessary cognitive overhead and obscured their underlying continuity.
+
+The product has since converged toward a single, unifying primitive: the workspace. From this shared space, mathematicians can draft notes, explore ideas via chat, and ask an AI to attempt proofs, with results flowing naturally back into their working document.
+
+Encouragingly, this direction aligns closely with the recent release of [OpenAI's Prism](https://prism.openai.com/), which independently arrives at a similarly workspace-centered model.
+
+
 ---
 {: data-content="footnotes"}
 
