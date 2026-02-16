@@ -162,7 +162,7 @@ However, formalized mathematics still represents only a tiny fraction of the tot
 
 When a problem is too hard in full generality, mathematicians often simplify it. Here, we begin by focusing on papers available as LaTeX on arXiv. Handling the rest of the literature—scanned books, PDFs, or other formats—is largely an engineering challenge (data access, OCR, and formatting), not a conceptual one.
 
-We now describe how we can build a searchable mathematical statements dataset from arXiv. All the underlying code is available in the [arxitex](https://github.com/dsleo/arxitex) repository. 
+We now describe how we can build a searchable mathematical statements dataset from arXiv. All the underlying code is available in the [arxitex](https://github.com/turnstilelabs/arxitex) repository. 
 
 The first goal is to extract all mathematical artifacts from each paper: definitions, lemmas, propositions, theorems, and corollaries along with their proofs. This can be done with carefully crafted regex heuristics that handle custom macros like `\newtheorem`. Citations are then linked back to other arXiv papers, forming a navigable web of references.
 
@@ -262,7 +262,7 @@ This is exactly where __artifact enhancement__ becomes useful: once each artifac
 
 ## Introducing MathXiv
 
-All of this is implemented in open source. The full pipeline, from LaTeX parsing to artifact enhancement and dependency inference, is available in the [arxitex](https://github.com/dsleo/arxitex) repository.
+All of this is implemented in open source. The full pipeline, from LaTeX parsing to artifact enhancement and dependency inference, is available in the [arxitex](https://github.com/turnstilelabs/arxitex) repository.
 
 On top of that, we release:
 - a [Hugging Face dataset](https://huggingface.co/datasets/turnstilelabs/mathxiv) containing 10k fully processed mathematics papers, with extracted and enhanced artifacts, and
