@@ -36,6 +36,16 @@ body[a="dark"] {
 
 // -------------------------------------------- //
 
+body[data-page="textes"] {
+  filter: invert(0) !important;
+}
+
+body[data-page="textes"] img,
+body[data-page="textes"] video,
+body[data-page="textes"] .google-slide {
+  filter: invert(0) !important;
+}
+
 // bg color is also needed in html in order to
 // block body's background propagation
 // see: https://stackoverflow.com/a/61265706

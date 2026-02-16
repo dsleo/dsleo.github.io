@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<h1>Des textes...</h1>
+
+{%- assign textes = site.textes | sort: "order" -%}
+{%- if textes.size > 0 -%}
+  <ul class="textes-list">
+    {%- for texte in textes -%}
+      <li><a href="{{ texte.url | relative_url }}">{{ texte.title }}</a></li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
