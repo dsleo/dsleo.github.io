@@ -3,7 +3,7 @@
 
 
 entries:
-  - title: Hi, I'm Léo Dreyfus-Schmidt.
+  - title: Hi, I'm  <a href="https://www.linkedin.com/in/leodreyfusschmidt/">Léo Dreyfus-Schmidt</a>.
     entries:
       - title: Mathematician in theory, machine learning in practice.
       - title: I build software for mathematicians.
