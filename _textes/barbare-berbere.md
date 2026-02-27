@@ -3,6 +3,10 @@ layout: texte
 title: Un barbare berbère
 order: 3
 ---
+<div class="abstract">
+<p>A quoi ressemblerait le français si c'était de l'hébreu ? Non pas qu'on le lirait de droite à gauche, mais si c'était un 'abjad', un alphabet consonantique.</p>
+<p>En gardant les consonnes de certains mots, on peut constituer plusieurs mots. Comme "chat" et "chut". Comme "barbare" et "berbère". A l'inverse, on pourrait garder les voyelles fixes et changer de consonnes, comme "tartare" et "barbare".</p>  
+</div>
 
 Après avoir tant ramer à faire rimer,
 tant trimer à tramer,
