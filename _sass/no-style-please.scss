@@ -36,16 +36,6 @@ body[a="dark"] {
 
 // -------------------------------------------- //
 
-body[data-page="textes"] {
-  filter: invert(0) !important;
-}
-
-body[data-page="textes"] img,
-body[data-page="textes"] video,
-body[data-page="textes"] .google-slide {
-  filter: invert(0) !important;
-}
-
 // bg color is also needed in html in order to
 // block body's background propagation
 // see: https://stackoverflow.com/a/61265706
@@ -217,6 +207,23 @@ blockquote {
   #homeCurves {
     height: 300px;
   }
+}
+
+.home-textes-hint {
+  margin-top: 2.5rem;
+  font-size: 0.55rem;
+  letter-spacing: 0.04em;
+  opacity: 0.55;
+  text-align: right;
+}
+
+.home-textes-hint a {
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.home-textes-hint a:hover {
+  opacity: 0.9;
 }
 
 
