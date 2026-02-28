@@ -48,7 +48,7 @@ These systems typically implement multi-stage pipelines: query expansion, large-
        alt="Deep Research" 
        style="max-width: 80%; height: auto;">
   <figcaption>
-  <a href="https://arxiv.org/abs/2506.1809"
+  <a href="https://arxiv.org/abs/2506.18096"
      target="_blank"
      rel="noopener noreferrer">Deep Research Agents: A Systematic Examination and Roadmap</a>
 </figcaption>
