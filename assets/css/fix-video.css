@@ -4,12 +4,18 @@
   Counteract it specifically for Loom embeds.
 */
 
-body[a="dark"] iframe[src*="loom.com"] {
+body[a="dark"] iframe[src*="loom.com"],
+body[a="dark"] iframe[src*="youtube.com"],
+body[a="dark"] iframe[src*="youtube-nocookie.com"],
+body[a="dark"] iframe[src*="youtu.be"] {
     filter: invert(1) !important;
 }
 
 @media (prefers-color-scheme: dark) {
-    body[a="auto"] iframe[src*="loom.com"] {
+    body[a="auto"] iframe[src*="loom.com"],
+    body[a="auto"] iframe[src*="youtube.com"],
+    body[a="auto"] iframe[src*="youtube-nocookie.com"],
+    body[a="auto"] iframe[src*="youtu.be"] {
         filter: invert(1) !important;
     }
 }
