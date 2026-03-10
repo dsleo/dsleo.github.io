@@ -39,6 +39,17 @@ layout: default
 
 {%-include menu_item.html collection=rest_entries-%}
 
+<section class="home-posts" aria-labelledby="home-posts-title">
+  <h2 id="home-posts-title" class="section-title">All posts</h2>
+  {%
+    include post_list.html
+      limit=5
+      show_more=true
+      show_more_text="See more..."
+      show_more_url="archive.html"
+  -%}
+</section>
+
 {{ content }}
 
 <div class="viz home-viz" aria-label="A small visualization showing cumulative posts over time per category.">

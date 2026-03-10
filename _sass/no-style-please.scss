@@ -184,7 +184,24 @@ blockquote {
 
 // Latest releases block on the homepage
 .home-releases {
-  margin: 1.75rem 0 2rem;
+  margin: 1.75rem 0;
+}
+
+.home-posts {
+  margin: 0 0 2rem;
+}
+
+.home-releases + .home-posts {
+  margin-top: 0;
+}
+
+.home-posts .section-title {
+  margin: 0 0 0.35rem;
+}
+
+.home-posts ul {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .home-releases-header {
@@ -200,7 +217,7 @@ blockquote {
   margin: 0;
   font-size: 1.05rem;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .home-releases-grid {
@@ -323,4 +340,10 @@ img {
   height: 0.95rem;
   display: block;
   fill: currentColor;
+}
+
+.section-title {
+  display: inline-block;
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
 }
