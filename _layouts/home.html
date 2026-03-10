@@ -8,7 +8,36 @@ layout: default
   {%-endif-%}
 </header>
 
-{%-include menu_item.html collection=site.data.menu.entries-%}
+{%- assign home_entries = site.data.menu.entries -%}
+{%- assign intro_entries = home_entries | slice: 0, 1 -%}
+{%- assign rest_entries = home_entries | slice: 1, 50 -%}
+
+{%-include menu_item.html collection=intro_entries-%}
+
+<section class="home-releases" aria-labelledby="home-releases-title">
+  <div class="home-releases-header">
+    <h2 id="home-releases-title">Latest releases</h2>
+  </div>
+  <div id="homeReleases" class="home-releases-grid" role="list"></div>
+  <noscript>
+    <ul class="home-releases-grid">
+      {%- for release in site.data.releases -%}
+      <li class="release-card">
+        <div class="release-card-header">
+          <a class="release-title" href="{{ release.url }}">{{ release.title }}</a>
+          <span class="release-tag">{{ release.label }}</span>
+        </div>
+        <p class="release-desc">{{ release.description }}</p>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </noscript>
+  <script type="application/json" id="homeReleasesData">
+    {{ site.data.releases | jsonify }}
+  </script>
+</section>
+
+{%-include menu_item.html collection=rest_entries-%}
 
 {{ content }}
 

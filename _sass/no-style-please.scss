@@ -182,6 +182,80 @@ blockquote {
   margin-top: 1.75rem;
 }
 
+// Latest releases block on the homepage
+.home-releases {
+  margin: 1.75rem 0 2rem;
+}
+
+.home-releases-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.home-releases-header h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.home-releases-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 720px) {
+  .home-releases-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.release-card {
+  border: thin solid black;
+  background: #fafafa;
+  box-shadow: 4px 4px 0 0 black;
+  padding: 0.75rem 0.9rem;
+}
+
+.release-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 0.75rem;
+}
+
+.release-title {
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.release-title:hover {
+  opacity: 0.85;
+}
+
+.release-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 0.1rem 0.35rem;
+  background: white;
+}
+
+.release-desc {
+  margin: 0.55rem 0 0;
+  font-size: 0.9rem;
+}
+
 // Give the homepage viz a bit more horizontal room than the main text column.
 // This reduces early overlap between curves while keeping the rest of the page narrow.
 .home-viz {
@@ -232,4 +306,21 @@ img {
   max-width: 100%;
   display: block;
   margin: 0 auto;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  border-bottom: 0;
+  margin-left: 0.35rem;
+  line-height: 1;
+  vertical-align: -0.1em;
+}
+
+.social-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  display: block;
+  fill: currentColor;
 }

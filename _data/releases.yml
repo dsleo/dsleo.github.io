@@ -1,0 +1,12 @@
+- title: The adjoint
+  url: https://adjoint.vercel.app/
+  label: demo
+  description: An AI-assisted workspace for exploring and iterating on mathematical ideas.
+- title: arxitex
+  url: https://github.com/turnstilelabs/arxitex
+  label: open source
+  description: Automated structuring of arXiv math papers into a searchable graph.
+- title: Mathxiv Explorer
+  url: https://huggingface.co/spaces/turnstilelabs/mathxiv-explorer
+  label: webapp
+  description: A web application for exploring papers as dependency graphs rather than linear PDFs.

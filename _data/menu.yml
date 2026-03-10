@@ -3,7 +3,7 @@
 
 
 entries:
-  - title: Hi, I'm  <a href="https://www.linkedin.com/in/leodreyfusschmidt/">Léo Dreyfus-Schmidt</a>.
+  - title: Hi, I'm Léo Dreyfus-Schmidt — <a class="social-link" href="https://www.linkedin.com/in/leodreyfusschmidt/" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.65-1.86 3.39-1.86 3.63 0 4.3 2.39 4.3 5.5v6.25zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a> <a class="social-link" href="https://x.com/dsleo" aria-label="X"><svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M18.9 3H22l-7.03 8.02L22.3 21h-5.98l-4.69-6.15L6.1 21H3l7.52-8.59L2 3h6.14l4.25 5.58L18.9 3zm-1.1 16h1.69L7.36 4.9H5.57L17.8 19z"/></svg></a>.
     entries:
       - title: Mathematician in theory, machine learning in practice.
       - title: I build software for mathematicians.
