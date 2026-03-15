@@ -36,7 +36,7 @@ Before jumping directly to “Einstein-level” intelligence, it may be useful t
 
 ### Level 1 — Induction and Deduction
 Induction emerges from large-scale statistical pattern recognition, and modern LLMs have become remarkably strong at it. This capability is well illustrated by systems such as [AlphaEvolve](https://arxiv.org/abs/2506.13131)[^2].
-Deduction is now achieved with the advent of reasoning models together with the scaling of formalized languages. A prominent example is[AlphaProof](https://www.nature.com/articles/s41586-025-09833-y).
+Deduction is now achieved with the advent of reasoning models together with the scaling of formalized languages. A prominent example is [AlphaProof](https://www.nature.com/articles/s41586-025-09833-y).
 
 ### Level 2 — Analogical reasoning
 Analogical reasoning allows a system to transfer relational structure from one domain to another: recognizing that two situations share the same underlying pattern even if their surface details differ.
