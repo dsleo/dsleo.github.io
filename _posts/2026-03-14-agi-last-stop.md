@@ -54,6 +54,8 @@ Evidence that current language models possess this kind of deep, robust analogic
 ### Level 3 — Full scientific creativity
 At the highest level lies scientific creativity: the ability to invent entirely new conceptual frameworks and evaluate competing theories. This is the territory of mythical figures like Albert Einstein or Alexander Grothendieck, where new mathematics or physics reshapes the field itself.
 
+In the recent DeepMind paper [LLMs can't jump](https://philsci-archive.pitt.edu/28024/1/Scientific_Invention_Position_Paper%20%2817%29.pdf), Tom Zahavy argues that major scientific discoveries rely on abductive reasoning which is the capability to formulate axioms and hypothesis even in the absence of data. From this perspective, advancing AI requires moving beyond systems that summarize scientific literature toward ones that can “perceive” the physical world. This is at the heart of the promise of, yet another poorly defined term, *world models*.
+
 Analogical reasoning may be the missing middle step between statistical learning and genuine scientific invention.
 
 ## AGI, the "G" is probably for Grossman
