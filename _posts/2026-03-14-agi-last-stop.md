@@ -29,16 +29,17 @@ Along similar lines, Demis Hassabis suggested the following [thought experiments
 
 3. If it could rediscover the theory from earlier physics knowledge, that would be strong evidence of genuine AGI.
 
-But there are only so many Einsteins in the world[^1]. Requiring AGI to match the achievements of the most exceptional scientific minds may simply set the bar too high. Although progress certainly has been astonishing. GPT-2 was useless for any real-world task, GPT-3.5 became useful for beginners on some tasks, GPT-5 performance may  match that of many professionals in several domains. We could measure this as a percentile on some imaginary scale of ability across the full population. But expecting AGI to sit at the very frontier of human intelligence—the extreme tail of the distribution—is the most demanding possible definition.
+But there are only so many Einsteins in the world[^1]. Requiring AGI to match the achievements of the most exceptional scientific minds may simply set the bar too high. Although progress certainly has been astonishing. GPT-2 was useless for any real-world task, GPT-3.5 became useful for beginners on some tasks, GPT-5 performance may  match that of many professionals in several domains. We could measure this as a percentile on some imaginary scale of ability across the full population. But expecting AGI to sit at the very frontier of human intelligence,the extreme tail of the distribution, is the most demanding possible definition.
 
 ## Climbing the Ladder: Three Levels of Intelligence
 Before jumping directly to “Einstein-level” intelligence, it may be useful to think of scientific capability as a ladder of cognitive abilities, each building on the previous one.
 
 ### Level 1 — Induction and Deduction
 Induction emerges from large-scale statistical pattern recognition, and modern LLMs have become remarkably strong at it. This capability is well illustrated by systems such as [AlphaEvolve](https://arxiv.org/abs/2506.13131)[^2].
+
 Deduction is now achieved with the advent of reasoning models together with the scaling of formalized languages. A prominent example is [AlphaProof](https://www.nature.com/articles/s41586-025-09833-y).
 
-### Level 2 — Analogical reasoning
+### Level 2 — Analogical Reasoning
 Analogical reasoning allows a system to transfer relational structure from one domain to another: recognizing that two situations share the same underlying pattern even if their surface details differ.
 
 This is not merely saying "A virus is like a computer worm because both infect things." A stronger historical example comes from the birth of financial mathematics. In the 1970s, [Black and Scholes](https://www.sfu.ca/~kkasa/BlackScholes_73.pdf) derived a partial differential equation governing the price of a European option. After a logarithmic change of variables and a rescaling of time, this equation reduced to the classical heat equation.
