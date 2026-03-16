@@ -13,7 +13,7 @@ Of course you can't, you're not in SF.
 AGI is such an ill-defined term that no one shares a clear understanding of it, and people would rather talk about when we will have AGI than what it even means.
 
 <div class="abstract">
-We examine the conceptual gap between current AI systems and the lofty ideal of AGI often imagined as human-level genius. We argue that between the abilities of induction and deduction and the pinnacle of full scientific creativity, lies analogical reasoning: the capacity to recognize structural similarities across domains and map concepts from one context to another.
+We examine the conceptual gap between current AI systems and the ideal of AGI often imagined as human-level genius. We argue that between the abilities of induction and deduction and the pinnacle of full scientific creativity, lies analogical reasoning: the capacity to recognize structural similarities across domains and map concepts from one context to another.
 This intermediate cognitive ability may be the missing step in advancing AI beyond pattern recognition toward genuine scientific discovery.
 </div>
 
@@ -41,13 +41,15 @@ Deduction is now achieved with the advent of reasoning models together with the 
 ### Level 2 — Analogical reasoning
 Analogical reasoning allows a system to transfer relational structure from one domain to another: recognizing that two situations share the same underlying pattern even if their surface details differ.
 
-This is not merely saying "A virus is like a computer worm because both infect things." A stronger example comes from the birth of financial mathematics. In the 1970s, [Black and Scholes](https://www.sfu.ca/~kkasa/BlackScholes_73.pdf) derived a partial differential equation governing the price of a European option. After a logarithmic change of variables and a rescaling of time, this equation reduced to the classical heat equation.
+This is not merely saying "A virus is like a computer worm because both infect things." A stronger historical example comes from the birth of financial mathematics. In the 1970s, [Black and Scholes](https://www.sfu.ca/~kkasa/BlackScholes_73.pdf) derived a partial differential equation governing the price of a European option. After a logarithmic change of variables and a rescaling of time, this equation reduced to the classical heat equation.
 
 Option pricing is mathematically equivalent to a diffusion process. And as a consequence, analytical techniques, such as fundamental solutions, Green’s functions, and Fourier methods, can be directly applied.
 
-More generally, analogical reasoning operates by identifying structure-preserving correspondences (isomorphism perhaps) between domains. Once such a correspondence is established, frameworks and tools developed in one field can be pulled back and applied to another.
+More generally, analogical reasoning operates by identifying structure-preserving correspondences between domains[^3]. Once such a correspondence is established, frameworks and tools developed in one field can be pulled back and applied to another. 
 
-Evidence that current language models possess this kind of deep, robust analogical reasoning remains limited. While they can often generate convincing analogies in language, it is unclear whether they perform the kind of structural mapping required for scientific discovery.
+There are plethora of such examples throughout science. For instance, a [bridge was just established](https://www.quantamagazine.org/a-new-bridge-links-the-strange-math-of-infinity-to-computer-science-20251121/) by Anton Bernshteyn between descriptive set theory and distributed computing by relating measurable colorings of infinite graphs to the behavior of local network algorithms.
+
+Evidence that current language models possess this kind of deep, robust analogical reasoning remains limited. They might often generate convincing analogies in language, it is unclear whether they can perform the kind of structural mapping required for scientific discovery.
 
 ### Level 3 — Full scientific creativity
 At the highest level lies scientific creativity: the ability to invent entirely new conceptual frameworks and evaluate competing theories. This is the territory of mythical figures like Albert Einstein or Alexander Grothendieck, where new mathematics or physics reshapes the field itself.
@@ -61,7 +63,7 @@ Breakthrough discoveries are often told as the triumph of a solitary genius. Eur
 By the early 1910s, Einstein had already reached several of the essential physical insights behind the theory of general relativity. The equivalence principle suggested that gravity and acceleration were fundamentally related, and he suspected that gravity might not be a force in the Newtonian sense but rather a property of spacetime itself.
 The difficulty was mathematical. Einstein initially tried to express the theory using extensions of the formalism of special relativity and classical field theory, but these approaches had no natural way to describe curved spaces.
 
-Einstein reached out to his old classmate from Zurich, Marcel Grossman[^3]:
+Einstein reached out to his old classmate from Zurich, Marcel Grossman[^4]:
 
 >“Grossmann, you must help me, otherwise I’ll go crazy.”
 
@@ -76,8 +78,6 @@ And [Grossman](https://en.wikipedia.org/wiki/Marcel_Grossmann#Collaborations_wit
 </figcaption>
 </figure>
 
-
-
 A similar pattern appears in the work of another genius, Richard Feynman. In the 1940s, he wondered whether quantum mechanics could be formulated directly from the action functional rather than through the Schrödinger equation or the operator formalism of Heisenberg. 
 
 During his [1965 Nobel Prize in Physics lecture](https://www.nobelprize.org/prizes/physics/1965/feynman/lecture/), he tells the story that while stuck on this, it is by the most random chance that he met a colleague at a beer party that pointed him to the right path, that of Dirac's of course.
@@ -86,7 +86,7 @@ During his [1965 Nobel Prize in Physics lecture](https://www.nobelprize.org/priz
 
 And this is what eventually led to the [path integral formulation](https://en.wikipedia.org/wiki/Path_integral_formulation).
 
-In both stories the decisive step was neither induction nor deduction, but representation: recognizing the framework in which the problem becomes solvable. The problem became tractable only once it was written in the right language.
+In both stories the decisive step was neither induction nor deduction, but representation, i.e. recognizing the framework in which the problem becomes solvable. The problem became tractable only once it was written in the right language[^5]. 
 
 This suggests a lower bar than the usual AGI rhetoric as we might not need a system capable of reproducing Einstein but a system that reliably plays the role of Grossmann: identifying relevant frameworks and proposing the right reformulation. 
 
@@ -95,5 +95,8 @@ This suggests a lower bar than the usual AGI rhetoric as we might not need a sys
 
 [^1]: Though we are promised “a country of geniuses in a data center” by Dario Amodei, [recently](https://www.dwarkesh.com/p/dario-amodei-2).
 [^2]: As well as its cousins like [ShinkaEvolve](https://sakana.ai/shinka-evolve/) or the latest [AdaEvolve](https://arxiv.org/abs/2602.20133).
-[^3]: See the excellent [Marcel Grossmann and his contribution to the general theory of relativity](https://ar5iv.labs.arxiv.org/html/1312.4068).
+[^3]: The mathematician in me is tempted to describe this as *functorial*.
+[^4]: See the excellent [Marcel Grossmann and his contribution to the general theory of relativity](https://ar5iv.labs.arxiv.org/html/1312.4068).
+[^5]: And when the right language doesn't exist yet, Grothendieck, *le bâtisseur* (see §2.5 of [Récoltes et Semailles](https://www.la-plateforme-stevenson.org/v4/_media/connaissance/comprendremulti/pdf441_grothendieck_recoltes_et_semailles.pdf)), suggests we have to create it. It's his infamous [rising sea](https://ncatlab.org/nlab/show/The+Rising+Sea) approach.
+
 
