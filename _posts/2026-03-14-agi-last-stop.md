@@ -41,9 +41,13 @@ Deduction is now achieved with the advent of reasoning models together with the 
 ### Level 2 — Analogical reasoning
 Analogical reasoning allows a system to transfer relational structure from one domain to another: recognizing that two situations share the same underlying pattern even if their surface details differ.
 
-This ability enables systems to reuse conceptual structures, map ideas across fields, and generate new hypotheses.
+This is not merely saying "A virus is like a computer worm because both infect things." A stronger example comes from the birth of financial mathematics. In the 1970s, [Black and Scholes](https://www.sfu.ca/~kkasa/BlackScholes_73.pdf) derived a partial differential equation governing the price of a European option. After a logarithmic change of variables and a rescaling of time, this equation reduced to the classical heat equation.
 
-Evidence that current language models possess robust analogical reasoning remains limited. They can often produce convincing analogies in language, but whether they truly perform structural analogy at the level required for scientific discovery is still debated.
+Option pricing is mathematically equivalent to a diffusion process. And as a consequence, analytical techniques, such as fundamental solutions, Green’s functions, and Fourier methods, can be directly applied.
+
+More generally, analogical reasoning operates by identifying structure-preserving correspondences (isomorphism perhaps) between domains. Once such a correspondence is established, frameworks and tools developed in one field can be pulled back and applied to another.
+
+Evidence that current language models possess this kind of deep, robust analogical reasoning remains limited. While they can often generate convincing analogies in language, it is unclear whether they perform the kind of structural mapping required for scientific discovery.
 
 ### Level 3 — Full scientific creativity
 At the highest level lies scientific creativity: the ability to invent entirely new conceptual frameworks and evaluate competing theories. This is the territory of mythical figures like Albert Einstein or Alexander Grothendieck, where new mathematics or physics reshapes the field itself.
