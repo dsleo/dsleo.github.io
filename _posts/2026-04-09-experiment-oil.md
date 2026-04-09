@@ -7,15 +7,13 @@ category: causal
 
 When you first drink Coca-Cola, you might wonder what makes it so dominant. The intuitive answer is: a better product. So you look for the “secret recipe.” 
 
-Very naturally—and a bit naively—you assume that the best product wins. Unfortunately, the recipe is a well-guarded secret, and even Coca-Cola employees are often kept in the dark when preparing the drink. But the recipe is not the point[^1].
+Very naturally, and a bit naively, you assume that the best product wins. Unfortunately, the recipe is a well-guarded secret, and even Coca-Cola employees are often kept in the dark when preparing the drink. But the recipe is not the point[^1].
 
 <div class="abstract">
 <p>The “data is the new oil” narrative shaped a generation of business strategy, but it misses a crucial ingredient: experimentation.</p>
 <p>Data helps us understand the past and experiments allow us to establish causality and make reliable decisions. </p>
 <p>The real competitive advantage of modern tech companies is not just data collection, but their ability to run controlled experiments at scale.</p>
 </div>
-
-A modern version of the Coca-Cola story is the "data is the new oil" narrative.
 
 ## Remember, Data is the new oil?
 
@@ -74,7 +72,7 @@ While working on optimizing and personalizing discounts at a retailer, we built 
 
 Thankfully, there is now a well-established body of work[^2] on experimentation in business settings, covering both statistical and organizational aspects.
 
-## Data is the new Coke
+## Maybe Data is the new Coke?
 
 To circle back to Coca-Cola: even with the perfect recipe, you would not automatically build a beverage empire. The real “secret recipe” of modern tech companies is not just data, but their ability to run experiments at scale. Data informs, experiments decide.
 
