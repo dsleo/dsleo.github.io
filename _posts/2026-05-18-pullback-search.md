@@ -39,7 +39,7 @@ The classical approach to building a search engine comes at a steep infrastructu
 Or, you can do everything on the fly and don't build and index at all.
 
 Pullback treats existing academic search engines as a distributed retrieval layer. Rather than maintaining its own artifact index, it discovers candidate papers through iterative query reformulation, extracts mathematical artifacts on demand, and ranks them against the user's original query[^1]. 
-Of course, this introduces a clear architectural tradeoff. What is gained in simplicity is potentially lost in precision: public search engines—whether generic like Tavily and Serp, or academic like [Semantic Scholar](https://www.semanticscholar.org/), [OpenAlex](https://openalex.org/), and arXiv primarily index paper metadata rather than the in-line mathematical content.
+Of course, this introduces a clear architectural tradeoff. What is gained in simplicity is potentially lost in precision: public search engines—whether generic like Tavily and Serp, or academic like [Semantic Scholar](https://www.semanticscholar.org/), [OpenAlex](https://openalex.org/), and arXiv primarily index paper metadata rather than the in-line mathematical content[^1].
 
 To make this architecture truly agentic, an LLM orchestrator is placed on top. A fitting title for this role is The Librarian: an agent tasked with evaluating whether the returned results truly satisfy the user's intent. If they fall short, the Librarian guides the next iteration of query reformulation and discovery. And when the system still fails to meet expectations, it opens a dedicated loop for the user to provide direct feedback, steering the next round of reasoning.
 
@@ -110,5 +110,6 @@ Last but not least, true mathematical search therefore requires structural extra
 ---
 {: data-content="footnotes"}
 
-[^1]: for the prototype we use off-the-shell embeddings like OpenAI's text-embedding-3-small.
-[^2]: though not to be confused with Meta's [Atlas-Lean framework](https://github.com/facebookresearch/atlas-lean).
+[^1]: another natural limit of relying on external APIs is their availability: it's not clear how to get an api key for Semantic Scholar, and it's easy to hit the rate limit of arxiv api.
+[^2]: for the prototype we use off-the-shell embeddings like OpenAI's text-embedding-3-small.
+[^3]: though not to be confused with Meta's [Atlas-Lean framework](https://github.com/facebookresearch/atlas-lean).
