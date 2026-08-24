@@ -1,0 +1,15 @@
+{%- assign items = site.data.coming_up -%}
+
+{%- if items.size > 0 -%}
+  <ul>
+    {%- for item in items -%}
+      <li>
+        {%- if item.url -%}
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {%- else -%}
+          {{ item.title }}
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}

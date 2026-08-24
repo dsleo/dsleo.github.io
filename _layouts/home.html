@@ -39,6 +39,11 @@ layout: default
 
 {%-include menu_item.html collection=rest_entries-%}
 
+<section class="home-coming-up" aria-labelledby="home-coming-up-title">
+  <h2 id="home-coming-up-title" class="section-title">Coming up</h2>
+  {%- include coming_up_list.html -%}
+</section>
+
 <section class="home-posts" aria-labelledby="home-posts-title">
   <h2 id="home-posts-title" class="section-title">All posts</h2>
   {%

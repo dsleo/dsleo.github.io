@@ -191,14 +191,20 @@ blockquote {
   margin: 0 0 2rem;
 }
 
+.home-coming-up {
+  margin: 0 0 2rem;
+}
+
 .home-releases + .home-posts {
   margin-top: 0;
 }
 
+.home-coming-up .section-title,
 .home-posts .section-title {
   margin: 0 0 0.35rem;
 }
 
+.home-coming-up ul,
 .home-posts ul {
   margin-top: 0;
   padding-top: 0;
